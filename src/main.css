@@ -1,0 +1,26 @@
+/* Styles for the popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-item {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.popup-item:hover {
+  background: #f0f0f0;
+}

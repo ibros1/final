@@ -1,0 +1,275 @@
+.header {
+  position: fixed;
+  top: 0;
+  /* This ensures the header is not at the top */
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: white;
+  height: 80px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  /* Center the logo */
+  display: flex;
+  align-items: center;
+
+}
+
+
+@media (max-width: 810px) {
+  .header{
+    position: fixed;
+  }
+  .header-content {
+    margin-top: -100px;
+  }
+
+  .header a h1 {
+    visibility: hidden;
+  }
+
+  .navfeatures {
+    margin-left: -100px;
+  }
+
+  .navfeatures li i {
+    visibility: hidden;
+    z-index: 50;
+  }
+   
+
+.bars {
+  visibility: visible !important;
+  font-size: 40px;
+  color: #6F7F92;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.features {
+  margin-left: -360px;
+}
+.navfeatures{
+  margin-left: 200px;
+}
+  /* Show the specific icons you want */
+  .navfeatures li .search,
+  .navfeatures li .cart,
+  .navfeatures li .sun {
+    visibility: visible;
+  
+  }
+    .logo {
+      margin-right: 0px;
+    }
+  
+    .logo img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 160px;
+
+      width: 300px;
+  
+    }
+  .navlogin button {
+    visibility: hidden;
+  }
+  .hero{
+margin-top: -20px;
+width: 100%;
+  height: 700px;
+  }
+.hero img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: auto;
+  margin-left: 10px;
+  padding-top: 60px;
+}
+.herodesc{
+  margin-top: 200px;
+}
+.products .rows {
+  width: 500px;
+  height: 500px;
+  margin-top: 30px;
+  justify-content: center;
+  margin-left: 20px;
+}
+}
+
+
+
+@media (max-width: 786px) {
+  .header{
+    position: fixed;
+  }
+  .header-content {
+    margin-top: -100px;
+  }
+
+  .header a h1 {
+   display: hidden;
+  }
+
+ .features {
+   margin-left: -360px;
+ }
+
+  .navfeatures li i {
+   display: hidden;
+    z-index: 50;
+ 
+  }
+  .logo{
+    margin-right: 130px;
+  }
+    .logo img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 160px;
+      width: 300px;
+
+    }
+.bars {
+  visibility: visible !important;
+  font-size: 40px;
+  color: #6F7F92;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+  /* Show the specific icons you want */
+  .navfeatures li .search,
+  .navfeatures li .cart,
+  .navfeatures li .sun {
+    visibility: visible;
+  }
+
+  .navlogin button {
+    visibility: hidden;
+  }
+  .hero{
+margin-top: -20px;
+width: 100%;
+  height: 700px;
+  }
+.hero img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: auto;
+  margin-left: 140px;
+  padding-top: 50px;
+}
+.herodesc{
+  margin-top: -0px;
+}
+.products .rows {
+  width: 500px;
+  height: 500px;
+  margin-top: 30px;
+  justify-content: center;
+  margin-left: 60px;
+}
+}
+@media (max-width: 750px) {
+  .header{
+    position: fixed;
+  }
+  .header-content {
+    margin-top: -100px;
+  }
+
+  .header a h1 {
+   display: hidden;
+  }
+.features{
+  margin-left:-360px ;
+}
+  .navfeatures {
+    margin-left: -100px;
+  }
+
+  .navfeatures li i {
+    display: hidden;
+    z-index: 50;
+  }
+    
+
+ .bars {
+visibility: visible !important;
+font-size: 40px;
+  color: #6F7F92;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+  /* Show the specific icons you want */
+  .navfeatures li .search,
+  .navfeatures li .cart,
+  .navfeatures li .sun {
+    visibility: visible;
+  }
+
+  .navlogin button {
+    visibility: hidden;
+  }
+  .hero{
+margin-top: -20px;
+width: 100%;
+  height: 700px;
+  }
+.hero img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: auto;
+  margin-left: 140px;
+  padding-top: 50px;
+}
+.herodesc{
+  margin-top: -0px;
+}
+.products .rows {
+  width: 500px;
+  height: 500px;
+  margin-top: 30px;
+  justify-content: center;
+  margin-left: -90px;
+}
+}

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      id="bp-nouveau-bb-icons-css"
+      href="https://www.buddyboss.com/resources/wp-content/plugins/buddyboss-platform/bp-templates/bp-nouveau/icons/css/bb-icons.min.css?ver=1.0.3"
+      type="text/css"
+      media="screen"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Plus+Jakarta+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../main.css"></link>
+  </head>
+  <style>
+    li {
+      list-style: none;
+    }
+    .sidebar {
+      background-color: white;
+      box-shadow: 0px 4px 600px -1px rgba(0, 0, 0, 0.1),
+        0px 2px 400px -1px rgba(0, 0, 0, 0.06);
+      width: 20%;
+      z-index: 10;
+      visibility: visible;
+      overflow-y: auto;
+      height: calc(100vh - 0px);
+      position: fixed;
+      overflow-x: hidden;
+    }
+  </style>
+  <body>
+    <div
+      class="header bg-white w-[100%] h-[80px] shadow-sm flex fixed"
+      id="header"
+    >
+      <i class="bb-icon-bars-2 lg:hidden bars hover:bg-gray-100 rounded-lg"></i>
+
+      <div class="logo w-[160px] m-4 cursor-pointer">
+        <!-- <img src="../public/images/Untitled-1 - Copy.png" class="" /> -->
+      </div>
+      <div
+        class="header-container flex gap-4 text-center justify-center align-center text-[18px] text-[black] mt-4 mb-4 pl-[100px]"
+      >
+        <a href="#" data-tooltip="Home" class="hover:bg-gray-100 rounded-md">
+          <i class=""></i>
+          <h1 class="px-2 py-2">Home</h1></a
+        >
+        <a href="#" data-tooltip="Courses" class="hover:bg-gray-100 rounded-md">
+          <i class=""></i>
+          <h1 class="px-2 py-2">Courses</h1></a
+        >
+        <a href="#" data-tooltip="Members" class="hover:bg-gray-100 rounded-md">
+          <i class=""></i>
+          <h1 class="px-2 py-2">Members</h1></a
+        >
+        <a href="#" data-tooltip="Contact" class="hover:bg-gray-100 rounded-md">
+          <i class=""></i>
+          <h1 class="px-2 py-2">Contact</h1></a
+        >
+      </div>
+      <div class="features">
+        <div
+          class="navfeatures lg:ml-[20px] lg:mr-[40px] flex justify-center text-center mt-4"
+        >
+          <li data-tooltip="" id="searchIcon">
+            <i
+              class="bb-icon-search text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 search"
+            ></i>
+          </li>
+          <li data-tooltip="" id="sunIcon" onclick="toggleDarkMode()">
+            <i
+              class="bb-icon-sun text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 sun"
+            ></i>
+          </li>
+          <li
+            data-tooltip=""
+            id="moonIcon"
+            class="hidden moon"
+            onclick="toggleDarkMode()"
+          >
+            <i class="bb-icon-moon"></i>
+          </li>
+
+          <li data-tooltip="">
+            <i
+              class="bb-icon-shopping-cart text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 cart"
+            ></i>
+          </li>
+
+          <li data-tooltip="">
+            <i
+              class="bb-icon-bell text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
+            ></i>
+          </li>
+
+          <li data-tooltip="">
+            <i
+              class="bb-icon-inbox text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
+            ></i>
+          </li>
+        </div>
+      </div>
+
+      <div class="flex items-center bg-yellow-400 cursor-pointer rounded-3xl shadow-sm hover:border-2 hover:border-green-300 border-2 border-white mt-2 mb-2 p-4 transition duration-300 ease-in-out" onclick="showPopup()">
+  <div class="flex items-center">
+    <h3 class="text-md font-semibold">إبراهيم محمد أحمد</h3>
+    <div class="profilePicture w-12 h-12 ml-4">
+      <img src="../../public/images/profile.jpg" class="rounded-full cursor-pointer border-2 border-white hover:border-red-600 transtion duration-300 ease-in-out" alt="Profile Image" />
+    </div>
+  </div>
+</div>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <a href="#" class="popup-item"><i class="bb-icon-user"></i> Logout</a>
+    <a href="#" class="popup-item"><i class="bb-icon-user"></i> Payments</a>
+    <a href="#" class="popup-item"><i class="bb-icon-user"></i> Orders</a>
+    <!-- Add more items/icons as needed -->
+  </div>
+</div>
+
+<script>
+function showPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+
+    // Add an event listener to detect clicks outside the popup
+    document.addEventListener('click', closePopupOutside);
+    console.log('popup')
+}
+
+function closePopupOutside(event) {
+    const popup = document.getElementById('popup');
+    const isClickInsidePopup = popup.contains(event.target);
+
+    if (!isClickInsidePopup) {
+        popup.style.display = 'none';
+        // Remove the event listener after closing the popup
+        document.removeEventListener('click', closePopupOutside);
+    }
+}
+</script>
+
+    </div>
+    <div class="container w-[250px] bg-white absolute">
+      <div class="sidebar" onclick="(closeIocn)" id="sidebar">
+        <div class="logo ml-6 py-[14px]">
+          <a href="./Home.html">
+            <img
+              src="../../public/images/real logo Surmad.png"
+              href="/"
+              class="w-[180px] cursor-pointer"
+          /></a>
+          <div class="close mt-[10px] text-[33px]">
+            <i class="bb-icon-times cursor-pointer hidden" id="close"></i>
+          </div>
+        </div>
+        <hr class= />
+        <div class="sideprofile flex -py-3">
+          <img
+            src="../../public/images/profile.jpg"
+            class="w-[100px] rounded-full cursor-pointer"
+          />
+          <div class="desc">
+            <div class="verfied flex mt-5">
+              <h3 class="font-semibold hover:text-blue-600 cursor-pointer">
+                Eng Cypher
+              </h3>
+              <img
+                src="../../public/images/verified.png"
+                data-tooltip="Verfied"
+                class="w-5 h-5 ml-2 mt-1 cursor-pointer"
+              />
+            </div>
+            <div></div>
+            <p class="text-gray-400">@ibro</p>
+          </div>
+        </div>
+        <hr />
+        <div
+          class="side container flex flex-col ml-[10px] mr-[10px] text-black overflow-x-auto mt-[30px]"
+        >
+          <a href="#">
+            <li
+              id="showIcon"
+              class="bg-[#FFD700] rounded-md py-2 px-2 mr-4 cursor-pointer"
+            >
+              <i
+                class="_mi _before bb-icon-f buddyboss bb-icon-home text-white w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="text-white font-semibold sidebar-name">Home</span>
+            </li></a
+          >
+          <a href="../pages/profile.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-user w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">My Profile</span>
+            </li></a
+          >
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-graduation-cap w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">My Courses</span>
+            </li></a
+          >
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-certificate w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">My Certificates</span>
+            </li></a
+          >
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-certificate w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Diploma</span>
+            </li></a
+          >
+          <h3
+            class="text-left ml-[10px] font-semibold text-[#7F7F7F] mt-4 sidebar-heading"
+          >
+            <span class="sidebar-text">SETTINGS</span>
+          </h3>
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-cog w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Account</span>
+            </li></a
+          >
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-sign-out w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Log out</span>
+            </li></a
+          >
+        </div>
+      </div>
+    </div>
+
+<div class="main-content">
+      <div class="hero bg-blue-700 md:flex h-[600px]">
+        <img
+          src="../../public/images/istockphoto-962448746-612x612-removebg.png"
+          class="w-[450px] h-[400px] ml-[100px] mt-[100px]"
+        />
+        <div class="herodesc text-center mt-[200px] lg:ml-[150px]">
+          <h3 class="text-white font-bold text-[50px]">Welcome to surmad</h3>
+          <p class="text-white font-normal mb-30">
+            you can get products,courses,and services Lorem ipsum dolor sit amet
+            <br />
+            consectetur adipisicing elit. Voluptate dolores,
+          </p>
+          <div class="mt-[60px]">
+            <a href="#" class="bg-black text-white px-20 py-5 text-2xl"
+              >All Courses</a
+            >
+          </div>
+          >
+        </div>
+      </div>
+    </div>
+    <div class="bg-blue-100">
+      <h2
+        class="text-5xl flex justify-center text-center pt-[100px] font-semibold mb-20"
+      >
+        Our Services
+      </h2>
+
+      <div
+        class="products mt-neg-100 min-h-[1200] lg:flex sm:col sm:gap-6 sm:justify-center sm:ml-40 lg:ml-2 gap-6 justify-center"
+      >
+        <div class="container1 sm:mt-10 text-center md:flex">
+          <div class="colomn md:flex">
+            <div
+              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FA90ijraxStiEoemCcNUn&w=640&q=75"
+                class="w-[600px]"
+              />
+              <h3 class="text-2xl font-semibold hover:text-blue-500 mb-4">
+                All-Access Subscription
+              </h3>
+              <p class="text-gray-500 font-normal leading-5 mb-4">
+                Become the best coder you can be with unlimited access to all
+                the existing and future courses
+              </p>
+              <h4 class="text-orange-600 font-extrabold">Learn Now $29/m</h4>
+            </div>
+            <!-- Add other rows  with similar6structure here -->
+          </div>
+        </div>
+        <div class="container1 sm:mt-10 text-center flex">
+          <div class="colomn flex">
+            <div
+              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2FlkYCN9UvRNFaLzywghPu&w=640&q=75"
+                class="w-[600px]"
+              />
+              <h3 class="text-2xl font-semibold hover:text-blue-500 mb-4">
+                The Ultimate C++ Series
+              </h3>
+              <p class="text-gray-500 font-normal leading-5 mb-4">
+                Master Modern C++: Go from Novice to Professional. Everything
+                you need to code in C++ in one bundle!
+              </p>
+              <h4 class="text-blue-600 font-extrabold">Learn Now $10</h4>
+            </div>
+            <!-- Add other rows  with similar6structure here -->
+          </div>
+        </div>
+        <div class="container1 sm:mt-10 text-center flex">
+          <div class="colomn flex">
+            <div
+              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F4JkBtVU9QUwcwFCWi3AV&w=640&q=75"
+                class="w-[600px]"
+              />
+              <h3 class="text-2xl font-semibold hover:text-blue-500 mb-4">
+                The Ultimate JavaScript Series
+              </h3>
+              <p class="text-gray-500 font-normal leading-5 mb-4">
+                Master JavaScript: Go from Novice to Professional.Everything you
+                need to code in JavaScript in one bundle!
+              </p>
+              <h4 class="text-green-600 font-extrabold">Learn Now $29/m</h4>
+            </div>
+            <!-- Add other rows  with similar6structure here -->
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="products mt-neg-100 min-h-[1200] lg:flex lg:ml-2 sm:col mt-[40px] gap-6 justify-center sm:ml-40"
+      >
+        <div
+          class="container1 sm:mt-10 text-center flex justify-between mb-[40px] sm:text-center"
+        >
+          <div class="colomn flex">
+            <div
+              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FBFMMlbcQvml9HSqXcvNp&w=640&q=75"
+                class="w-[600px]"
+              />
+              <h3 class="text-2xl font-semibold hover:text-blue-500 mb-4">
+                Complete Python Mastery
+              </h3>
+              <p class="text-gray-500 font-normal leading-5 mb-4">
+                Everything you need to program in Python in one course (includes
+                3 real-world projects)
+              </p>
+              <h4 class="text-green-600 font-extrabold">Learn Now $20</h4>
+            </div>
+            <!-- Add other rows  with similar6structure here -->
+          </div>
+        </div>
+        <div class="container1 sm:mt-10 text-center flex">
+          <div class="colomn flex">
+            <div
+              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FINZsH6XtRIqQqxvYGP6Q&w=640&q=75"
+                class="lg:w-[400px] sm:w-[600px]"
+              />
+              <h3 class="text-2xl font-semibold hover:text-blue-500 mb-4">
+                The Ultimate HTML5 & CSS3 Series
+              </h3>
+              <p class="text-gray-500 font-normal leading-5 mb-4">
+                Everything you need to build fast and stunning websites with
+                HTML5 and CSS3 in one bundle
+              </p>
+              <h4 class="text-violet-600 font-extrabold">Learn Now $10</h4>
+            </div>
+            <!-- Add other rows  with similar6structure here -->
+          </div>
+        </div>
+        <div class="container1 sm:mt-10 text-center flex sm:pb-32">
+          <div class="colomn flex">
+            <div
+              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2Ft12BZqmRoulvCTDhoYie&w=640&q=75"
+                class="w-[600px]"
+              />
+              <h3 class="text-2xl font-semibold hover:text-blue-500 mb-4">
+                The Ultimate Java Mastery Series
+              </h3>
+              <p class="text-gray-500 font-normal leading-5 mb-4">
+                Master Java - the most popular programming language underpinning
+                most apps and websites
+              </p>
+              <h4 class="text-red-600 font-extrabold">Learn Now $29/m</h4>
+            </div>
+            <!-- Add other rows with similar structure here -->
+          </div>
+        </div>
+      </div>
+
+  </body>
+</html>
