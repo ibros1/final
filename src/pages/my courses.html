@@ -1,9 +1,19 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
+    <title>courses</title>
+  </head>
+  <body><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
     <link href="/dist/output.css" rel="stylesheet" />
+      <link rel="stylesheet" href="../darkmode.css">
+    <script src="../darkmode.js"></script>
     <link
       rel="stylesheet"
       id="bp-nouveau-bb-icons-css"
@@ -11,10 +21,11 @@
       type="text/css"
       media="screen"
     />
-  <link rel="stylesheet" href="../darkmode.css">
-    <script src="../darkmode.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="stylesheet" href="../darkmode.css">
+    <script src="../darkmode.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Plus+Jakarta+Sans:wght@600&display=swap"
       rel="stylesheet"
@@ -70,19 +81,18 @@
                 class="w-5 h-5 ml-2 mt-1 cursor-pointer"
               />
             </div>
-          
+            <div></div>
             <p class="text-gray-400">@ibro</p>
           </div>
         </div>
         <hr />
         <div
-          class="side container flex flex-col ml-[10px] mr-[10px] text-black overflow-x-auto mt-[30px]"
+          class="side container flex flex-col ml-[10px] mr-[10px] text-black  mt-[30px]"
         >
-       
-          <a href="../pages/Home.html">
+     <a href="../pages/Home.html">
             <li
               id="showIcon"
-              class="hover:bg-[#F2F4F5] rounded-md py-4 px-2 mr-4"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
             >
               <i
                 class="_mi _before bb-icon-l buddyboss bb-icon-home w-5 h-5 text-[28px]"
@@ -92,43 +102,45 @@
               ><span class="sidebar-name">Home</span>
             </li></a
           >
-          <a href="../pages/profile.html">
+            <a href="./profile.html">
             <li
               id="showIcon"
-              class="bg-[#FFD700] rounded-md py-4 px-2 mr-4 cursor-pointer text-white f"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
             >
               <i
-                class="_mi _before bb-icon-f buddyboss bb-icon-user w-5 h-5 text-[28px]  "
+                class="_mi _before bb-icon-l buddyboss bb-icon-user w-5 h-5 text-[28px]"
                 aria-hidden="true"
                 id="bb"
               ></i
-              ><span class="sidebar-name text-white font-semibold sidebar-name">My Profile</span>
+              ><span class="sidebar-name">My Profile</span>
             </li></a
           >
-          <a href="./my courses.html">
+          <a href="./profile.html">
             <li
               id="showIcon"
-              class="hover:bg-[#F2F4F5] rounded-md py-4 px-2 mr-4"
+              class="bg-[#FFD700] rounded-md py-2 px-2 mr-4 cursor-pointer"
             >
               <i
-                class="_mi _before bb-icon-l buddyboss bb-icon-graduation-cap w-5 h-5 text-[28px]"
+                class="_mi _before bb-icon-f buddyboss bb-icon-graduation-cap text-white w-5 h-5 text-[28px]"
                 aria-hidden="true"
                 id="bb"
               ></i
-              ><span class="sidebar-name">My Courses</span>
+              ><span class="text-white font-semibold sidebar-name">My Courses</span>
             </li></a
           >
+         
+        
           <a href="./members.html">
             <li
               id="showIcon"
-              class="hover:bg-[#F2F4F5] rounded-md py-4 px-2 mr-4"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
             >
               <i
                 class="_mi _before bb-icon-l buddyboss bb-icon-users w-5 h-5 text-[28px]"
                 aria-hidden="true"
                 id="bb"
               ></i
-              ><span class="sidebar-name">members</span>
+              ><span class="sidebar-name">Members</span>
             </li></a
           >
         
@@ -142,7 +154,7 @@
           <a href="#">
             <li
               id="showIcon"
-              class="hover:bg-[#F2F4F5] rounded-md py-4 px-2 mr-4"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
             >
               <i
                 class="_mi _before bb-icon-l buddyboss bb-icon-cog w-5 h-5 text-[28px]"
@@ -155,7 +167,7 @@
           <a href="#">
             <li
               id="showIcon"
-              class="hover:bg-[#F2F4F5] rounded-md py-4 px-2 mr-4"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
             >
               <i
                 class="_mi _before bb-icon-l buddyboss bb-icon-sign-out w-5 h-5 text-[28px]"
@@ -168,10 +180,9 @@
         </div>
       </div>
     </div>
-<div class="pl-48 w-full ">
+<div class="pl-48 w-full">
     <div
-      class="header bg-white w-full  h-[80px] shadow-sm flex fixed  "
-      id="header"
+      class="header bg-white w-full h-[80px] shadow-sm flex fixed" id="header"
     >
       <i class="bb-icon-bars-2 lg:hidden bars hover:bg-gray-100 rounded-lg"></i>
 
@@ -200,7 +211,7 @@
       </div>
       <div class="features">
         <div
-          class="navfeatures lg:ml-[20px] lg:mr-[40px] flex justify-center text-center mt-6"
+          class="navfeatures lg:ml-[20px] lg:mr-[40px] flex justify-center text-center mt-4"
         >
           <li data-tooltip="" id="searchIcon">
             <i
@@ -282,108 +293,72 @@ function closePopupOutside(event) {
 </script>
 
     </div>
-    <div class="container">
-      <div class="coloumn ml-[100px]">
-        <div class="profile border-2 w-[1050px] h-[500px] border-solid mx-auto rounded-lg ">
-<div class="cover -z-50">
-<img src="https://hurbad.com/wp-content/uploads/buddypress/members/3089/cover-image/62a7138652bd8-bp-cover-image.png" class="w-[100%] h-[300px] mx-auto">
-</div>
-
-
-<style>
-  /* Existing CSS code remains unchanged */
-
-.member-status.online {
-  position: absolute;
-
-  width: 15px;
-  height: 15px;
-  background-color: green;
-  border-radius: 50%;
-  top: -10px; /* Adjust this value to position the indicator */
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 250px;
-  margin-left: 200px;
-  border: 2px solid white;
-}
-
-/* Existing CSS code remains unchanged */
-
-</style>
-<div class="profile  ">
-    <span class="member-status online"></span> <!-- Green online indicator -->
-    <img src="../../public/images/profilenobg.png" class="w-[200px] mx-auto mt-[-100px] ">
-  </div> 
-<div class="coloumn mt-[-30px]">
-<div class= " bg-blue-600 inline  justify-center  px-6 -py-2 text-center  mx-auto text-white font-semibold  rounded-lg  ml-[480px] -mt-32 z-50" id="profiletype">
-  Admin
-
-</div>
-</div>
-<h3 class="mx-auto text-center font-semibold text-[20px]">
-إبراهيم محمد أحمد</h3>
-<p class="text-center text-gray-600">Active now</p>
-<div class="flex gap-6 ml-[40px] mt-[-10px]">
-<p class="fon-semibold text-gray-500" ><span class="font-bold text-gray-500  ">90+</span> followers</p>
-<p class="fon-semibold text-gray-500"><span class="font-bold text-gray-500 "  >16</span> following</p>
-</div>
-        </div>
-
-      </div>
- <div class="container mx-auto mt-20 mb-[200px]">
-    <ul class="flex justify-center text-[25px] pl-36">
-      <li class="mr-6">
-        <a href="#" class="border-b-2 border-blue-500 pb-2 ">Posts</a>
-      </li>
-      <li class="mr-6">
-        <a href="#" class="text-gray-500">Photos</a>
-      </li>
-      <li class="mr-6">
-        <a href="#" class="text-gray-500">Videos</a>
-      </li>
-    </ul>
-<div class="mx-auto my-auto text-center  border-2 mt-8 w-[80%] ml-[180px] "> 
-    <!-- Content for each tab -->
-    <div class="py-6">
-      <!-- Posts Tab Content -->
-      <div class="posts-tab">
-        <!-- Display user posts here -->
-        <p>User's posts go here</p>
-      </div>
-
-      <!-- Photos Tab Content -->
-      <div class="photos-tab hidden">
-        <!-- Display user photos here -->
-        <p>User's photos go here</p>
-      </div>
-
-      <!-- Videos Tab Content -->
-      <div class="videos-tab hidden">
-        <!-- Display user videos here -->
-        <p>User's videos go here</p>
-      </div>
-    </div>
-  </div>
-</div>
-  <script>
-    // JavaScript to handle tab switching
-    const tabs = document.querySelectorAll('ul li a');
-    const tabContents = document.querySelectorAll('.py-6 > div');
-
-    tabs.forEach((tab, index) => {
-      tab.addEventListener('click', (e) => {
-        e.preventDefault();
-        tabs.forEach((t) => t.classList.remove('border-b-2', 'border-blue-500', 'pb-2'));
-        tab.classList.add('border-b-2', 'border-blue-500', 'pb-2');
-
-        tabContents.forEach((content) => content.classList.add('hidden'));
-        tabContents[index].classList.remove('hidden');
-      });
-    });
-  </script>
     
 
-  
+<div class="ml-[100px] mt-[200px] mb-4">
+   <div class="courses-grid mt-16 ml-4 grid grid-cols-3 gap-32 md:grid-cols-2 lg:grid-cols-3 ">
+        <!-- Course 1 -->
+        <div class="course-card  border border-gray-300 rounded-lg w-[300px] h-[430px] hover:shadow-2xl ">
+        
+            <img src="https://hurbad.com/wp-content/uploads/2023/01/Accounting-Principles-Horizental-300x173.png" alt="Course 1" class="w-[300px] h-40 object-cover mb-4 rounded-md cursor-pointer">
+              <p class="mb-4 pl-4">21 topics</p>
+            <h2 class="text-xl font-semibold hover:text-yellow-500 mb-2 pl-4 pb-2 cursor-pointer">Full Stack Web development </h2>
+            <div class="flex pl-4">
+            <img src="https://hurbad.com/wp-content/uploads/avatars/22504/64d6944997164-bpthumb.jpg" class="w-8 h-8 rounded-full cursor-pointer">
+                  <p class="text-black  pl-2 font-semibold mt-1 hover:text-blue-600 cursor-pointer">Hussein Mohamed Nuure</p></div>
+
+            <div class="mt-2">
+            <p class="text-gray-700 mb-4 pl-4">Course description: Brief description of what the course covers.</p>
+            <p class="text-green-600 font-bold pl-4 pt-6">Continue Your Course</p></div>
+        
+       
+    
+      
+        
+
+        </div>
+        <div class="course-card  border border-gray-300 rounded-lg w-[300px] h-[430px] hover:shadow-2xl -ml-20">
+        
+            <img src="https://hurbad.com/wp-content/uploads/2023/01/Accounting-Principles-Horizental-300x173.png" alt="Course 1" class="w-[300px] h-40 object-cover mb-4 rounded-md cursor-pointer">
+              <p class="mb-4 pl-4">21 topics</p>
+            <h2 class="text-xl font-semibold hover:text-yellow-500 mb-2 pl-4 pb-2 cursor-pointer">Full Stack Web development </h2>
+            <div class="flex pl-4">
+            <img src="https://hurbad.com/wp-content/uploads/avatars/22504/64d6944997164-bpthumb.jpg" class="w-8 h-8 rounded-full cursor-pointer">
+                  <p class="text-black  pl-2 font-semibold mt-1 hover:text-blue-600 cursor-pointer">Hussein Mohamed Nuure</p></div>
+
+            <div class="mt-2">
+            <p class="text-gray-700 mb-4 pl-4">Course description: Brief description of what the course covers.</p>
+            <p class="text-green-600 font-bold pl-4 pt-6">Continue Your Course</p></div>
+        
+       
+    
+      
+        
+
+        </div>
+        <div class="course-card  border border-gray-300 rounded-lg w-[300px] h-[430px] hover:shadow-2xl -ml-40">
+        
+            <img src="https://hurbad.com/wp-content/uploads/2023/01/Accounting-Principles-Horizental-300x173.png" alt="Course 1" class="w-[300px] h-40 object-cover mb-4 rounded-md cursor-pointer">
+              <p class="mb-4 pl-4">21 topics</p>
+            <h2 class="text-xl font-semibold hover:text-yellow-500 mb-2 pl-4 pb-2 cursor-pointer">Full Stack Web development </h2>
+            <div class="flex pl-4">
+            <img src="https://hurbad.com/wp-content/uploads/avatars/22504/64d6944997164-bpthumb.jpg" class="w-8 h-8 rounded-full cursor-pointer">
+                  <p class="text-black  pl-2 font-semibold mt-1 hover:text-blue-600 cursor-pointer">Hussein Mohamed Nuure</p></div>
+
+            <div class="mt-2">
+            <p class="text-gray-700 mb-4 pl-4">Course description: Brief description of what the course covers.</p>
+            <p class="text-green-600 font-bold pl-4 pt-6">Continue Your Course</p></div>
+        
+       
+    
+      
+        
+
+        </div>
+
+</div>
+</div>
+  </body>
+</html>
 </body>
 </html>
