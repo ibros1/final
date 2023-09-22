@@ -19,6 +19,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Plus+Jakarta+Sans:wght@600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../src/darkmode.css" />
+    <script src="../src/darkmode.js"></script>
     <link rel="stylesheet" href="../src/resposive.css" />
   </head>
   <style>
@@ -26,7 +28,7 @@
       list-style: none;
     }
   </style>
-  <body>
+  <body id="body">
     <!-- !header -->
     <div
       class="header bg-white w-[100%] h-[80px] shadow-sm flex fixed"
@@ -35,24 +37,40 @@
       <i class="bb-icon-bars-2 lg:hidden bars hover:bg-gray-100 rounded-lg"></i>
 
       <div class="logo w-[200px] m-4 cursor-pointer">
-        <img src="../public/images/Untitled-1 - Copy.png" class="" />
+        <img src="../public/images/real logo Surmad.png" class="" />
       </div>
       <div
         class="header-container flex gap-8 text-center justify-center align-center ml-[80px] mt-[25px] text-[20px] text-[#6F7F92]"
       >
-        <a href="#" data-tooltip="Home" class="hover:text-blue-900">
+        <a
+          href="./index.html"
+          data-tooltip="Home"
+          class="hover:text-blue-900 text-blue-900"
+        >
           <i class=""></i>
           <h1 class="">Home</h1></a
         >
-        <a href="#" data-tooltip="Courses" class="hover:text-blue-900">
+        <a
+          href="./Homepages/courses.html"
+          data-tooltip="Courses"
+          class="hover:text-blue-900"
+        >
           <i class=""></i>
           <h1 class="">Courses</h1></a
         >
-        <a href="#" data-tooltip="Members" class="hover:text-blue-900">
+        <a
+          href="./Homepages/members.html"
+          data-tooltip="Members"
+          class="hover:text-blue-900"
+        >
           <i class=""></i>
           <h1 class="">Members</h1></a
         >
-        <a href="#" data-tooltip="Contact" class="hover:text-blue-900">
+        <a
+          href="./Homepages/contact.html"
+          data-tooltip="Contact"
+          class="hover:text-blue-900"
+        >
           <i class=""></i>
           <h1 class="">Contact</h1></a
         >
@@ -136,7 +154,6 @@
               >All Courses</a
             >
           </div>
-          >
         </div>
       </div>
     </div>

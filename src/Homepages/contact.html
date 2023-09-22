@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      id="bp-nouveau-bb-icons-css"
+      href="https://www.buddyboss.com/resources/wp-content/plugins/buddyboss-platform/bp-templates/bp-nouveau/icons/css/bb-icons.min.css?ver=1.0.3"
+      type="text/css"
+      media="screen"
+    />
+    <link rel="stylesheet" href="../darkmode.css" />
+    <script src="../darkmode.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Plus+Jakarta+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/resposive.css" />
+  </head>
+  <style>
+    li {
+      list-style: none;
+    }
+  </style>
+  <body>
+    <div
+      class="header bg-white w-[100%] h-[80px] shadow-sm flex fixed"
+      id="header"
+    >
+      <i class="bb-icon-bars-2 lg:hidden bars hover:bg-gray-100 rounded-lg"></i>
+
+      <div class="logo w-[200px] m-4 cursor-pointer">
+        <img src="../../public/images/real logo Surmad.png" class="" />
+      </div>
+      <div
+        class="header-container flex gap-8 text-center justify-center align-center ml-[80px] mt-[25px] text-[20px] text-[#6F7F92]"
+      >
+        <a href="../index.html" data-tooltip="Home" class="hover:text-blue-900">
+          <i class=""></i>
+          <h1 class="">Home</h1></a
+        >
+        <a
+          href="./courses.html"
+          data-tooltip="Courses"
+          class="hover:text-blue-900"
+        >
+          <i class=""></i>
+          <h1 class="">Courses</h1></a
+        >
+        <a
+          href="./members.html"
+          data-tooltip="Members"
+          class="hover:text-blue-900"
+        >
+          <i class=""></i>
+          <h1 class="">Members</h1></a
+        >
+        <a
+          href="./contact.html"
+          data-tooltip="Contact"
+          class="hover:text-blue-900 text-blue-900"
+        >
+          <i class=""></i>
+          <h1 class="">Contact</h1></a
+        >
+      </div>
+      <div class="features">
+        <div
+          class="navfeatures lg:ml-[20px] lg:mr-[40px] flex justify-center text-center mt-3"
+        >
+          <li data-tooltip="" id="searchIcon">
+            <i
+              class="bb-icon-search text-[36px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 text-gray-500 search"
+            ></i>
+          </li>
+          <li data-tooltip="" id="sunIcon" onclick="toggleDarkMode()">
+            <i
+              class="bb-icon-sun text-[36px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 text-gray-500 sun"
+            ></i>
+          </li>
+          <li
+            data-tooltip=""
+            id="moonIcon"
+            class="hidden moon"
+            onclick="toggleDarkMode()"
+          >
+            <i class="bb-icon-moon"></i>
+          </li>
+
+          <li data-tooltip="">
+            <i
+              class="bb-icon-shopping-cart text-[36px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 text-gray-500 cart"
+            ></i>
+          </li>
+
+          <li data-tooltip="">
+            <i
+              class="bb-icon-bell text-[36px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 text-gray-500"
+            ></i>
+          </li>
+
+          <li data-tooltip="">
+            <i
+              class="bb-icon-inbox text-[36px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 text-gray-500"
+            ></i>
+          </li>
+        </div>
+      </div>
+      <div class="navlogin flex gap-4">
+        <a href="../pages/loging.html">
+          <button
+            class="bg-[#FFDB0E] px-4 py-3 rounded-xl text-white font-semibold text-xl mt-4"
+            type="button "
+          >
+            Sign in
+          </button></a
+        >
+        <!-- <a href="../src/pages/loging.html">
+          <button
+            class="bg-[#2548e6] px-4 py-3 rounded-xl text-white font-semibold text-xl mt-4"
+            type="button"
+          >
+            Sign up
+          </button></a -->
+      </div>
+    </div>
+  </body>
+</html>

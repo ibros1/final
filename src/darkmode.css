@@ -1,0 +1,69 @@
+
+body.dark-mode {
+  background-color: #091025;
+ 
+  color: #ffffff;
+
+}
+
+body.dark-mode .sidebar {
+  background-color: #091025;
+
+  color: #ffffff;
+ 
+}
+/* .body.dark-mode #courses{
+  background-color:#097025 ;
+} */
+body.dark-mode .sideprofile{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body.dark-mode .desc{
+  margin-left: 10px;
+}
+
+body.dark-mode .header, .header .div {
+  background-color: none;
+  width: 100%;
+  color: white;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode i,
+body.dark-mode li,
+body.dark-mode span{
+  color: white;
+}
+body.dark-mode .rows{
+  border: 2px solid white;
+  
+}
+body.dark-mode div {
+  background-color: #080D1E;
+}
+body.dark-mode #profiletype{
+ background-color: yellow;
+ padding: 2px 20px;
+ border-radius: 8px;
+}
+
+
+.moon {
+  opacity: 0;
+}
+
+
+.moon.moon-opacity {
+  opacity: 1;
+}
+
+.sun.sun-opacity {
+  opacity: 0;
+}

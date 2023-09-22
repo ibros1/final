@@ -12,6 +12,8 @@
       type="text/css"
       media="screen"
     />
+    <link rel="stylesheet" href="../darkmode.css">
+    <script src="../darkmode.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,9 +40,138 @@
       overflow-x: hidden;
     }
   </style>
-  <body>
+  <body class="flex flex-col" id="body">
+
+<div class="container  bg-white absolute ">
+      <div class="sidebar  " onclick="(closeIocn)" id="sidebar">
+        <div class="logo ml-6 py-[14px]">
+          <a href="./Home.html">
+            <img
+              src="../../public/images/real logo Surmad.png"
+              href="/"
+              class="w-[180px] cursor-pointer"
+          /></a>
+          <div class="close mt-[10px] text-[33px]">
+            <i class="bb-icon-times cursor-pointer hidden" id="close"></i>
+          </div>
+        </div>
+        <hr class= />
+        <div class="sideprofile flex -py-3">
+          <img
+            src="../../public/images/profilenobg.png"
+            class="w-[100px] rounded-full cursor-pointer"
+          />
+          <div class="desc">
+            <div class="verfied flex mt-5">
+              <h3 class="font-semibold hover:text-blue-600 cursor-pointer">
+                Eng Cypher
+              </h3>
+              <img
+                src="../../public/images/verified.png"
+                data-tooltip="Verfied"
+                class="w-5 h-5 ml-2 mt-1 cursor-pointer"
+              />
+            </div>
+          
+            <p class="text-gray-400">@ibro</p>
+          </div>
+        </div>
+        <hr />
+        <div
+          class="side container flex flex-col ml-[10px] mr-[10px] text-black overflow-x-auto mt-[30px]"
+        >
+          <a href="./Home.html">
+            <li
+              id="showIcon"
+              class="bg-[#FFD700] rounded-md py-2 px-2 mr-4 cursor-pointer"
+            >
+              <i
+                class="_mi _before bb-icon-f buddyboss bb-icon-home text-white w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="text-white font-semibold sidebar-name">Home</span>
+            </li></a
+          >
+          <a href="../pages/profile.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-user w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">My Profile</span>
+            </li></a
+          >
+          <a href="./my courses.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-graduation-cap w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">My Courses</span>
+            </li></a
+          >
+          <a href="./members.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-users w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">members</span>
+            </li></a
+          >
+        
+       
+          
+          <h3
+            class="text-left ml-[10px] font-semibold text-[#7F7F7F] mt-4 sidebar-heading"
+          >
+            <span class="sidebar-text">SETTINGS</span>
+          </h3>
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-cog w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Account</span>
+            </li></a
+          >
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-sign-out w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Log out</span>
+            </li></a
+          >
+        </div>
+      </div>
+    </div>
+<div class="pl-48 w-full">
     <div
-      class="header bg-white w-[100%] h-[80px] shadow-sm flex fixed"
+      class="header bg-white w-full  h-[80px] shadow-sm flex fixed  "
       id="header"
     >
       <i class="bb-icon-bars-2 lg:hidden bars hover:bg-gray-100 rounded-lg"></i>
@@ -49,13 +180,13 @@
         <!-- <img src="../public/images/Untitled-1 - Copy.png" class="" /> -->
       </div>
       <div
-        class="header-container flex gap-4 text-center justify-center align-center text-[18px] text-[black] mt-4 mb-4 pl-[100px]"
+        class="header-container flex gap-4 text-center justify-center align-center text-[18px] text-[black] mt-4 mb-4  "
       >
-        <a href="#" data-tooltip="Home" class="hover:bg-gray-100 rounded-md">
+        <a href="./Home.html" data-tooltip="Home" class="hover:bg-gray-100 rounded-md bg-gray-100">
           <i class=""></i>
           <h1 class="px-2 py-2">Home</h1></a
         >
-        <a href="#" data-tooltip="Courses" class="hover:bg-gray-100 rounded-md">
+        <a href="./courses.html" data-tooltip="Courses" class="hover:bg-gray-100 rounded-md">
           <i class=""></i>
           <h1 class="px-2 py-2">Courses</h1></a
         >
@@ -63,7 +194,7 @@
           <i class=""></i>
           <h1 class="px-2 py-2">Members</h1></a
         >
-        <a href="#" data-tooltip="Contact" class="hover:bg-gray-100 rounded-md">
+        <a href="./contact.html" data-tooltip="Contact" class="hover:bg-gray-100 rounded-md">
           <i class=""></i>
           <h1 class="px-2 py-2">Contact</h1></a
         >
@@ -77,19 +208,21 @@
               class="bb-icon-search text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 search"
             ></i>
           </li>
-          <li data-tooltip="" id="sunIcon" onclick="toggleDarkMode()">
-            <i
-              class="bb-icon-sun text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 sun"
-            ></i>
-          </li>
           <li
-            data-tooltip=""
-            id="moonIcon"
-            class="hidden moon"
-            onclick="toggleDarkMode()"
-          >
-            <i class="bb-icon-moon"></i>
-          </li>
+  data-tooltip=""
+  id="sunIcon"
+  onclick="toggleDarkMode()"
+>
+  <i class="bb-icon-sun text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 sun"></i>
+</li>
+<li
+  data-tooltip=""
+  id="moonIcon"
+  class="hidden moon"
+  onclick="toggleDarkMode()"
+>
+  <i class="bb-icon-moon"></i>
+</li>
 
           <li data-tooltip="">
             <i
@@ -152,143 +285,7 @@ function closePopupOutside(event) {
 </script>
 
     </div>
-    <div class="container w-[250px] bg-white absolute">
-      <div class="sidebar" onclick="(closeIocn)" id="sidebar">
-        <div class="logo ml-6 py-[14px]">
-          <a href="./Home.html">
-            <img
-              src="../../public/images/real logo Surmad.png"
-              href="/"
-              class="w-[180px] cursor-pointer"
-          /></a>
-          <div class="close mt-[10px] text-[33px]">
-            <i class="bb-icon-times cursor-pointer hidden" id="close"></i>
-          </div>
-        </div>
-        <hr class= />
-        <div class="sideprofile flex -py-3">
-          <img
-            src="../../public/images/profile.jpg"
-            class="w-[100px] rounded-full cursor-pointer"
-          />
-          <div class="desc">
-            <div class="verfied flex mt-5">
-              <h3 class="font-semibold hover:text-blue-600 cursor-pointer">
-                Eng Cypher
-              </h3>
-              <img
-                src="../../public/images/verified.png"
-                data-tooltip="Verfied"
-                class="w-5 h-5 ml-2 mt-1 cursor-pointer"
-              />
-            </div>
-            <div></div>
-            <p class="text-gray-400">@ibro</p>
-          </div>
-        </div>
-        <hr />
-        <div
-          class="side container flex flex-col ml-[10px] mr-[10px] text-black overflow-x-auto mt-[30px]"
-        >
-          <a href="#">
-            <li
-              id="showIcon"
-              class="bg-[#FFD700] rounded-md py-2 px-2 mr-4 cursor-pointer"
-            >
-              <i
-                class="_mi _before bb-icon-f buddyboss bb-icon-home text-white w-5 h-5 text-[28px]"
-                aria-hidden="true"
-                id="bb"
-              ></i
-              ><span class="text-white font-semibold sidebar-name">Home</span>
-            </li></a
-          >
-          <a href="../pages/profile.html">
-            <li
-              id="showIcon"
-              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
-            >
-              <i
-                class="_mi _before bb-icon-l buddyboss bb-icon-user w-5 h-5 text-[28px]"
-                aria-hidden="true"
-                id="bb"
-              ></i
-              ><span class="sidebar-name">My Profile</span>
-            </li></a
-          >
-          <a href="#">
-            <li
-              id="showIcon"
-              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
-            >
-              <i
-                class="_mi _before bb-icon-l buddyboss bb-icon-graduation-cap w-5 h-5 text-[28px]"
-                aria-hidden="true"
-                id="bb"
-              ></i
-              ><span class="sidebar-name">My Courses</span>
-            </li></a
-          >
-          <a href="#">
-            <li
-              id="showIcon"
-              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
-            >
-              <i
-                class="_mi _before bb-icon-l buddyboss bb-icon-certificate w-5 h-5 text-[28px]"
-                aria-hidden="true"
-                id="bb"
-              ></i
-              ><span class="sidebar-name">My Certificates</span>
-            </li></a
-          >
-          <a href="#">
-            <li
-              id="showIcon"
-              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
-            >
-              <i
-                class="_mi _before bb-icon-l buddyboss bb-icon-certificate w-5 h-5 text-[28px]"
-                aria-hidden="true"
-                id="bb"
-              ></i
-              ><span class="sidebar-name">Diploma</span>
-            </li></a
-          >
-          <h3
-            class="text-left ml-[10px] font-semibold text-[#7F7F7F] mt-4 sidebar-heading"
-          >
-            <span class="sidebar-text">SETTINGS</span>
-          </h3>
-          <a href="#">
-            <li
-              id="showIcon"
-              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
-            >
-              <i
-                class="_mi _before bb-icon-l buddyboss bb-icon-cog w-5 h-5 text-[28px]"
-                aria-hidden="true"
-                id="bb"
-              ></i
-              ><span class="sidebar-name">Account</span>
-            </li></a
-          >
-          <a href="#">
-            <li
-              id="showIcon"
-              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
-            >
-              <i
-                class="_mi _before bb-icon-l buddyboss bb-icon-sign-out w-5 h-5 text-[28px]"
-                aria-hidden="true"
-                id="bb"
-              ></i
-              ><span class="sidebar-name">Log out</span>
-            </li></a
-          >
-        </div>
-      </div>
-    </div>
+    
 
 <div class="main-content">
       <div class="hero bg-blue-700 md:flex h-[600px]">
@@ -308,7 +305,7 @@ function closePopupOutside(event) {
               >All Courses</a
             >
           </div>
-          >
+          
         </div>
       </div>
     </div>
@@ -325,7 +322,7 @@ function closePopupOutside(event) {
         <div class="container1 sm:mt-10 text-center md:flex">
           <div class="colomn md:flex">
             <div
-              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+              class="rows bg-white lg:w-[300px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
             >
               <img
                 src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FA90ijraxStiEoemCcNUn&w=640&q=75"
@@ -346,7 +343,7 @@ function closePopupOutside(event) {
         <div class="container1 sm:mt-10 text-center flex">
           <div class="colomn flex">
             <div
-              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+              class="rows bg-white lg:w-[300px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
             >
               <img
                 src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2FlkYCN9UvRNFaLzywghPu&w=640&q=75"
@@ -367,7 +364,7 @@ function closePopupOutside(event) {
         <div class="container1 sm:mt-10 text-center flex">
           <div class="colomn flex">
             <div
-              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+              class="rows bg-white lg:w-[300px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
             >
               <img
                 src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F4JkBtVU9QUwcwFCWi3AV&w=640&q=75"
@@ -395,7 +392,7 @@ function closePopupOutside(event) {
         >
           <div class="colomn flex">
             <div
-              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+              class="rows bg-white lg:w-[300px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
             >
               <img
                 src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FBFMMlbcQvml9HSqXcvNp&w=640&q=75"
@@ -416,7 +413,7 @@ function closePopupOutside(event) {
         <div class="container1 sm:mt-10 text-center flex">
           <div class="colomn flex">
             <div
-              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+              class="rows bg-white lg:w-[300px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
             >
               <img
                 src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FINZsH6XtRIqQqxvYGP6Q&w=640&q=75"
@@ -437,7 +434,7 @@ function closePopupOutside(event) {
         <div class="container1 sm:mt-10 text-center flex sm:pb-32">
           <div class="colomn flex">
             <div
-              class="rows bg-white lg:w-[400px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
+              class="rows bg-white lg:w-[300px] sm:w-[600px] lg:h-[400px] sm:h-[700px] rounded-lg cursor-pointer"
             >
               <img
                 src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2Ft12BZqmRoulvCTDhoYie&w=640&q=75"
