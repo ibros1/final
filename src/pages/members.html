@@ -21,7 +21,11 @@
     />
     <link rel="stylesheet" href="../main.css"></link>
       <link rel="stylesheet" href="../darkmode.css">
+      <link rel="stylesheet" href="../main.css">
     <script src="../darkmode.js"></script>
+    <script src="../search.js"></script>
+    <script src="../cart.js"></script>
+    <script src="../notification.js"></script>
   </head>
   <style>
     li {
@@ -170,6 +174,72 @@
         </div>
       </div>
     </div>
+
+
+   <div id="cartPopup" class="cartPopup fixed inset-0 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg max-w-sm shadow-xl border-2 mt-[-230px] ml-[200px] w-[600px]">
+      <h2 class="text-xl font-semibold mb-4">Cart</h2>
+      <p class="bg-gray-100 px-12 rounded-full py-4">No products in the cart.</p>
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full closeCart" onclick="closeCartPopup()">Close</button>
+    </div>
+  </div>
+   <div id="NotificationPopup" class=" hidden notificationPopup fixed inset-0 flex items-center justify-center ml-[400px] ">
+    <div class="bg-white p-6 rounded-lg max-w-sm shadow-xl border-2 mt-[40px]  w-[600px] h-[500px]">
+      <h2 class="text-xl font-semibold mb-4 from-neutral-800 text-[28px]">Notifications</h2>
+      <hr>
+      <div class="container mt-[30px]">
+        <div class="cloumns">
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/19/621e22610fbc7-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Abdinasir Mohamud</h1>
+             <p class="text-gray-400">Has Accepted Your Freind Request.</p>
+             </div>
+               </div>
+                
+          </div>
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/5/621e24af08ca9-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Emilia </h1>
+             <p class="text-gray-400">Has sent you a message.</p>
+             </div>
+               </div>
+                
+          </div>
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/17/621e243cea28e-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Hassan Abdi</h1>
+             <p class="text-gray-400">Has reply a comment on your video.</p>
+             </div>
+               </div>
+                
+          </div>
+
+        </div>
+
+      </div>
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full closeCart" onclick="closeNotifiPopup()">Close</button>
+    </div>
+  </div>
+
+
+
+  
+       <div id="searchPopup" class="fixed   inset-0 backdrop-blur-md  z-50 hidden">
+    <div class="bg-[#FAFAFC] rounded-lg p-6 w-[100%] h-[80px] ">
+     
+      <!-- <input id="searchInput" type="text" class=" border-gray-300 p-2 w-full items-center outline-none bb-icon-search " placeholder="Search..." /> -->
+          <input id="demo" type="text" placeholder="Search..." class=" py-2 px-4 w-[60%]   rounded-xl focus:outline-none focus:border-blue-500 transition-colors duration-300 focus:placeholder-transparent placeholder-gray-500 hover:border-green-500 fixed  bg-[#F2F4F5] focus:border-green-500 border-2 ml-[300px] ">
+          <div class=" ">
+      <i onclick="closeSearchPopup()" class="bb-icon-times text-4xl text-gray-600 cursor-pointer ml-[1250px]"></i>
+      </div>
+    </div>
+  </div>
 <div class="ml-48 w-full">
     <div
       class="header bg-white w-full  h-[80px] shadow-sm flex fixed  "
@@ -207,7 +277,7 @@
           <li data-tooltip="" id="searchIcon">
             <i
               class="bb-icon-search text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 search"
-            ></i>
+            onclick="openSearchPopup() "></i>
           </li>
           <li data-tooltip="" id="sunIcon" onclick="toggleDarkMode()">
             <i
@@ -226,13 +296,14 @@
           <li data-tooltip="">
             <i
               class="bb-icon-shopping-cart text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 cart"
-            ></i>
+           id="cartIcon" class="cart-icon" onclick="showCartPopup()" ></i>
           </li>
 
           <li data-tooltip="">
             <i
-              class="bb-icon-bell text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
-            ></i>
+              class="NotificationIcon bb-icon-bell text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
+            onclick="showNotiPopup()"></i>
+            <span id="notificationCounter">3</span>
           </li>
 
           <li data-tooltip="">
@@ -289,7 +360,7 @@ function closePopupOutside(event) {
 
 </div>
 <div class="ml-[300px] ">
-    <div class="mx-auto w-[90%] my-4 flex  mt-[100px] ml-[16px]">
+    <div class="mx-auto w-[90%] my-4 flex  mt-[100px] ml-[16px] ">
         <h1 class="text-[36px]">Members</h1>
     </div>  
 <form class="mr-[20px] ml-[18px]">   
@@ -360,7 +431,7 @@ function closePopupOutside(event) {
      <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
   <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
   <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
-    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox225408-uploads/avatars/19/621e22610fbc7-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
+    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/2/621e2ce403550-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-yellow-400 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Student</span></div>
     <div class="text-center">
       <p class="mt-2">Since last 5 hours ago</p>
@@ -379,7 +450,7 @@ function closePopupOutside(event) {
      <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
   <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
   <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
-    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox225408-uploads/avatars/6/621e236d4e3c2-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
+    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/19/621e22610fbc7-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-red-400 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Support</span></div>
     <div class="text-center">
        <p class="mt-2">Since last 5days ago</p>
@@ -421,7 +492,7 @@ function closePopupOutside(event) {
      <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
   <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
   <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
-    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox225408-uploads/avatars/5/621e24af08ca9-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
+    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/5/621e24af08ca9-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-black -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Teacher</span></div>
     <div class="text-center">
       <h3 class="font-semibold text-[20px] mt-4 hover:text-blue-600">Emilia</h3>
@@ -439,7 +510,7 @@ function closePopupOutside(event) {
      <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
   <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
   <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
-    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox225408-uploads/avatars/6/621e236d4e3c2-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
+    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/13/621e287601267-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-red-400 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Support</span></div>
     <div class="text-center">
       <h3 class="font-semibold text-[20px] mt-4 hover:text-blue-600">Ali Oumar
@@ -462,10 +533,10 @@ function closePopupOutside(event) {
      <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
   <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
   <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
-    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox225408-uploads/avatars/2/621e2ce403550-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
+    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/6/621e236d4e3c2-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-blue-600 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Worker</span></div>
     <div class="text-center">
-      <h3 class="font-semibold text-[20px] mt-4 hover:text-blue-600">John</h3>
+      <h3 class="font-semibold text-[20px] mt-4 hover:text-blue-600">Alyssa</h3>
     </div>
   </div>
 <div class=" ">
@@ -480,7 +551,7 @@ function closePopupOutside(event) {
      <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
   <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
   <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
-    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox225408-uploads/avatars/19/621e22610fbc7-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
+    <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/17/621e243cea28e-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-yellow-400 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Student</span></div>
     <div class="text-center">
       <h3 class="font-semibold text-[20px] mt-4 hover:text-blue-600">Abdinasir Mohamud</h3>
@@ -501,7 +572,7 @@ function closePopupOutside(event) {
     <img src="https://hurbad.com/wp-content/uploads/avatars/1/62bc0a6fa9de0-bpfull.jpg" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-green-400 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Head Teacher</span></div>
     <div class="text-center">
-      <h3 class="font-semibold text-[20px] mt-4 hover:text-blue-600">Ali Oumar
+      <h3 class="font-semibold text-[20px] mt-4 hover:text-blue-600">Abdirizak Hersi
 </h3>
     </div>
   </div>

@@ -22,6 +22,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../main.css"></link>
+    <script src="../search.js"></script>
+    <script src="../cart.js"></script>
+    <script src="../notification.js"></script>
+    <script src="../inbox.js"></script>
   </head>
   <style>
     li {
@@ -169,6 +173,122 @@
         </div>
       </div>
     </div>
+<div id="cartPopup" class="cartPopup fixed inset-0 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg max-w-sm shadow-xl border-2 mt-[-230px] ml-[200px] w-[600px]">
+      <h2 class="text-xl font-semibold mb-4">Cart</h2>
+      <p class="bg-gray-100 px-12 rounded-full py-4">No products in the cart.</p>
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full closeCart" onclick="closeCartPopup()">Close</button>
+    </div>
+  </div>
+        <div id="searchPopup" class="fixed   inset-0 backdrop-blur-md  z-50 hidden">
+    <div class="bg-[#FAFAFC] rounded-lg p-6 w-[100%] h-[80px] ">
+     
+      <!-- <input id="searchInput" type="text" class=" border-gray-300 p-2 w-full items-center outline-none bb-icon-search " placeholder="Search..." /> -->
+          <input id="demo" type="text" placeholder="Search..." class=" py-2 px-4 w-[60%]   rounded-xl focus:outline-none focus:border-blue-500 transition-colors duration-300 focus:placeholder-transparent placeholder-gray-500 hover:border-green-500 fixed  bg-[#F2F4F5] focus:border-green-500 border-2 ml-[300px] ">
+          <div class=" ">
+      <i onclick="closeSearchPopup()" class="bb-icon-times text-4xl text-gray-600 cursor-pointer ml-[1250px]"></i>
+      </div>
+    </div>
+  </div>
+   <div id="NotificationPopup" class=" hidden notificationPopup fixed inset-0 flex items-center justify-center ml-[400px] ">
+    <div class="bg-white p-6 rounded-lg max-w-sm shadow-xl border-2 mt-[40px]  w-[600px] h-[500px]">
+      <h2 class="text-xl font-semibold mb-4 from-neutral-800 text-[28px]">Notifications</h2>
+      <hr>
+      <div class="container mt-[30px]">
+        <div class="cloumns">
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/19/621e22610fbc7-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Abdinasir Mohamud</h1>
+             <p class="text-gray-400">Has Accepted Your Freind Request.</p>
+             </div>
+               </div>
+                
+          </div>
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/5/621e24af08ca9-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Emilia </h1>
+             <p class="text-gray-400">Has sent you a message.</p>
+             </div>
+               </div>
+                
+          </div>
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/17/621e243cea28e-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Hassan Abdi</h1>
+             <p class="text-gray-400">Has reply a comment on your video.</p>
+             </div>
+               </div>
+                
+          </div>
+
+        </div>
+
+      </div>
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full closeCart" onclick="closeNotifiPopup()">Close</button>
+    </div>
+  </div>
+<div id="inboxPopup" class="inboxPopup fixed inset-0 flex items-center justify-center z-50 hidden">
+  <div class="bg-white p-6 rounded-lg max-w-sm shadow-xl border-2 mt-[60px]  w-[7000px] h-[550px] ml-[600px] ">
+      <h2 class="text-xl font-semibold mb-4 from-neutral-800 text-[28px]">Messages</h2>
+      <hr>
+      <div class="container mt-[10px]">
+        <div class="cloumns">
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/19/621e22610fbc7-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Abdinasir Mohamud <span class="text-gray-400 font-normal">3hrs ago</span> </h1>
+              <div class="flex">
+              <img src="http://127.0.0.1:5501/public/images/profilenobg.png" class="w-[30px] h-[30px]">
+             <p class="text-gray-400">Hello cypher Yes i will make that</p>
+             </div>
+             </div>
+               </div>
+                
+          </div>
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/5/621e24af08ca9-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Emilia <span class="text-gray-400 font-normal">3days ago</span> </h1>
+             <div class="flex">
+              <img src="http://127.0.0.1:5501/public/images/profilenobg.png" class="w-[30px] h-[30px]">
+             <p class="text-gray-400">Where is the camera,did you forget it.</p>
+             </div>
+             </div>
+               </div>
+                
+          </div>
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/17/621e243cea28e-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Hassan Abdi <span class="text-gray-400 font-normal">3min ago</span></h1>
+              <div class="flex">
+              <img src="http://127.0.0.1:5501/public/images/profilenobg.png" class="w-[30px] h-[30px]">
+             <p class="text-gray-400">Yes, i have been send the video for you!</p>
+             </div>
+             </div>
+               </div>
+                
+          </div>
+
+        </div>
+
+      </div>
+   
+   <div class="grid grid-cols-2 gap-2 mt-10">
+ <a href="./messages.html">
+      <button class=" bg-blue-500 hover:bg-blue-600 text-white font-semibold text-[18px] py-4  px-6  closeCart" onclick="closeInboxPopup()"> All Messages</button></a>
+      <button class=" bg-red-500 hover:bg-red-600 text-white font-semibold text-[20px] py-4 px-6 closeCart" onclick="closeInboxPopup()"> Close</button></div>
+    </div>
+  </div>
 <div class="pl-48 w-full">
     <div
       class="header bg-white w-full  h-[80px] shadow-sm flex fixed  "
@@ -206,7 +326,7 @@
           <li data-tooltip="" id="searchIcon">
             <i
               class="bb-icon-search text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 search"
-            ></i>
+            onclick="openSearchPopup() "></i>
           </li>
           <li
   data-tooltip=""
@@ -227,19 +347,19 @@
           <li data-tooltip="">
             <i
               class="bb-icon-shopping-cart text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 cart"
-            ></i>
+           onclick="showCartPopup()" ></i>
           </li>
 
           <li data-tooltip="">
             <i
               class="bb-icon-bell text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
-            ></i>
+             onclick="showNotiPopup()"></i>
           </li>
 
           <li data-tooltip="">
             <i
               class="bb-icon-inbox text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
-            ></i>
+            onclick="showInboxPopup()"></i>
           </li>
         </div>
       </div>

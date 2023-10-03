@@ -31,6 +31,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../main.css"></link>
+    <script src="../darkmode.js"></script>
+    <script src="../search.js"></script>
+    <link rel="stylesheet" href="../darkmode.css">
+
   </head>
   <style>
     li {
@@ -180,6 +184,16 @@
         </div>
       </div>
     </div>
+        <div id="searchPopup" class="fixed   inset-0 backdrop-blur-md  z-50 hidden">
+    <div class="bg-[#FAFAFC] rounded-lg p-6 w-[100%] h-[80px] ">
+     
+      <!-- <input id="searchInput" type="text" class=" border-gray-300 p-2 w-full items-center outline-none bb-icon-search " placeholder="Search..." /> -->
+          <input id="demo" type="text" placeholder="Search..." class=" py-2 px-4 w-[60%]   rounded-xl focus:outline-none focus:border-blue-500 transition-colors duration-300 focus:placeholder-transparent placeholder-gray-500 hover:border-green-500 fixed  bg-[#F2F4F5] focus:border-green-500 border-2 ml-[300px] ">
+          <div class=" ">
+      <i onclick="closeSearchPopup()" class="bb-icon-times text-4xl text-gray-600 cursor-pointer ml-[1250px]"></i>
+      </div>
+    </div>
+  </div>
 <div class="pl-48 w-full">
     <div
       class="header bg-white w-full h-[80px] shadow-sm flex fixed" id="header"
@@ -216,7 +230,7 @@
           <li data-tooltip="" id="searchIcon">
             <i
               class="bb-icon-search text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 search"
-            ></i>
+            onclick="openSearchPopup() "></i>
           </li>
           <li data-tooltip="" id="sunIcon" onclick="toggleDarkMode()">
             <i

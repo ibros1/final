@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Members</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      id="bp-nouveau-bb-icons-css"
+      href="https://www.buddyboss.com/resources/wp-content/plugins/buddyboss-platform/bp-templates/bp-nouveau/icons/css/bb-icons.min.css?ver=1.0.3"
+      type="text/css"
+      media="screen"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Plus+Jakarta+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../main.css"></link>
+      <link rel="stylesheet" href="../darkmode.css">
+    <script src="../darkmode.js"></script>
+    <script src="../search.js"></script>
+  </head>
+  <style>
+    li {
+      list-style: none;
+    }
+    .sidebar {
+      background-color: white;
+      box-shadow: 0px 4px 600px -1px rgba(0, 0, 0, 0.1),
+        0px 2px 400px -1px rgba(0, 0, 0, 0.06);
+      width: 20%;
+      z-index: 10;
+      visibility: visible;
+      overflow-y: auto;
+      height: calc(100vh - 0px);
+      position: fixed;
+      overflow-x: hidden;
+    }
+  </style>
+  <body class="flex flex-col" id="body">
+
+<div class="container  bg-white absolute ">
+      <div class="sidebar  " onclick="(closeIocn)" id="sidebar">
+        <div class="logo ml-6 py-[14px]">
+          <a href="./Home.html">
+            <img
+              src="../../public/images/real logo Surmad.png"
+              href="/"
+              class="w-[180px] cursor-pointer"
+          /></a>
+          <div class="close mt-[10px] text-[33px]">
+            <i class="bb-icon-times cursor-pointer hidden" id="close"></i>
+          </div>
+        </div>
+        <hr class= />
+        <div class="sideprofile flex -py-3">
+          <img
+            src="../../public/images/profilenobg.png"
+            class="w-[100px] rounded-full cursor-pointer"
+          />
+          <div class="desc">
+            <div class="verfied flex mt-5">
+              <h3 class="font-semibold hover:text-blue-600 cursor-pointer">
+                Eng Cypher
+              </h3>
+              <img
+                src="../../public/images/verified.png"
+                data-tooltip="Verfied"
+                class="w-5 h-5 ml-2 mt-1 cursor-pointer"
+              />
+            </div>
+            <div></div>
+            <p class="text-gray-400">@ibro</p>
+          </div>
+        </div>
+        <hr />
+        <div
+          class="side container flex flex-col ml-[10px] mr-[10px] text-black overflow-x-auto mt-[30px]"
+        >
+     <a href="../pages/Home.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4 "
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-home w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Home</span>
+            </li></a
+          >
+       <a href="./profile.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-user w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">My Profile</span>
+            </li></a
+          >
+         
+          <a href="./my courses.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-graduation-cap w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">My Courses</span>
+            </li></a
+          >
+             <a href="./members.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4 cursor-pointer"
+            >
+              <i
+                class="_mi _before bb-icon-i buddyboss bb-icon-users w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="  sidebar-name">Members</span>
+            </li></a
+          >
+        
+       
+          
+          <h3
+            class="text-left ml-[10px] font-semibold text-[#7F7F7F] mt-4 sidebar-heading"
+          >
+            <span class="sidebar-text">SETTINGS</span>
+          </h3>
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-cog w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Account</span>
+            </li></a
+          >
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-sign-out w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Log out</span>
+            </li></a
+          >
+        </div>
+      </div>
+    </div>
+    
+    
+      <div id="searchPopup" class="fixed   inset-0 backdrop-blur-md  z-50 hidden">
+    <div class="bg-[#FAFAFC] rounded-lg p-6 w-[100%] h-[80px] ">
+     
+      <!-- <input id="searchInput" type="text" class=" border-gray-300 p-2 w-full items-center outline-none bb-icon-search " placeholder="Search..." /> -->
+          <input id="demo" type="text" placeholder="Search..." class=" py-2 px-4 w-[60%]   rounded-xl focus:outline-none focus:border-blue-500 transition-colors duration-300 focus:placeholder-transparent placeholder-gray-500 hover:border-green-500 fixed  bg-[#F2F4F5] focus:border-green-500 border-2 ml-[300px] ">
+          <div class=" ">
+      <i onclick="closeSearchPopup()" class="bb-icon-times text-4xl text-gray-600 cursor-pointer ml-[1250px]"></i>
+      </div>
+    </div>
+  </div>
+
+ <script>
+  
+  </script> 
+
+
+<div class="ml-48 w-full">
+  <!-- search seaction design -->
+ 
+  
+    <div
+      class="header bg-white w-full  h-[80px] shadow-sm flex fixed -z-50 "
+      id="header"
+    >
+      <i class="bb-icon-bars-2 lg:hidden bars hover:bg-gray-100 rounded-lg"></i>
+
+      <div class="logo w-[160px] m-4 cursor-pointer">
+        <!-- <img src="../public/images/Untitled-1 - Copy.png" class="" /> -->
+      </div>
+      <div
+        class="header-container flex gap-4 text-center justify-center align-center text-[18px] text-[black] mt-4 mb-4  "
+      >
+        <a href="./Home.html" data-tooltip="Home" class="hover:bg-gray-100 rounded-md">
+          <i class=""></i>
+          <h1 class="px-2 py-2">Home</h1></a
+        >
+        <a href="./courses.html" data-tooltip="Courses" class="hover:bg-gray-100 rounded-md">
+          <i class=""></i>
+          <h1 class="px-2 py-2">Courses</h1></a
+        >
+        <a href="./members.html" data-tooltip="Members" class="hover:bg-gray-100 rounded-md   ">
+          <i class=""></i>
+          <h1 class="px-2 py-2">Members</h1></a
+        >
+        <a href="./contact.html" data-tooltip="Contact" class="hover:bg-gray-100 rounded-md bg-gray-100" id="now">
+          <i class=""></i>
+          <h1 class="px-2 py-2">Contact</h1></a
+        >
+      </div>
+
+
+       
+
+
+
+      <div class="features">
+        <div
+          class="navfeatures lg:ml-[20px] lg:mr-[40px] flex justify-center text-center mt-4"
+        >
+          <li data-tooltip="" id="searchIcon" >
+            <i onclick="openSearchPopup()"
+              class="bb-icon-search text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 search"
+            ></i>
+          </li>
+          <li data-tooltip="" id="sunIcon" onclick="toggleDarkMode()">
+            <i
+              class="bb-icon-sun text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 sun"
+            ></i>
+          </li>
+          <li
+            data-tooltip=""
+            id="moonIcon"
+            class="hidden moon"
+            onclick="toggleDarkMode()"
+          >
+            <i class="bb-icon-moon"></i>
+          </li>
+
+          <li data-tooltip="">
+            <i
+              class="bb-icon-shopping-cart text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 cart"
+            ></i>
+          </li>
+
+          <li data-tooltip="">
+            <i
+              class="bb-icon-bell text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
+            ></i>
+          </li>
+
+          <li data-tooltip="">
+            <i
+              class="bb-icon-inbox text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
+            ></i>
+          </li>
+        </div>
+      </div>
+
+      <div class="flex items-center bg-yellow-400 cursor-pointer rounded-3xl shadow-sm hover:border-2 hover:border-green-300 border-2 border-white mt-2 mb-2 p-4 transition duration-300 ease-in-out" onclick="showPopup()">
+  <div class="flex items-center">
+    <h3 class="text-md font-semibold">إبراهيم محمد أحمد</h3>
+    <div class="profilePicture w-12 h-12 ml-4">
+      <img src="../../public/images/profile.jpg" class="rounded-full cursor-pointer border-2 border-white hover:border-red-600 transtion duration-300 ease-in-out" alt="Profile Image" />
+    </div>
+  </div>
+</div>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <a href="#" class="popup-item"><i class="bb-icon-user"></i> Logout</a>
+    <a href="#" class="popup-item"><i class="bb-icon-user"></i> Payments</a>
+    <a href="#" class="popup-item"><i class="bb-icon-user"></i> Orders</a>
+    <!-- Add more items/icons as needed -->
+  </div>
+</div>
+
+<script>
+function showPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+
+    // Add an event listener to detect clicks outside the popup
+    document.addEventListener('click', closePopupOutside);
+    console.log('popup')
+}
+
+function closePopupOutside(event) {
+    const popup = document.getElementById('popup');
+    const isClickInsidePopup = popup.contains(event.target);
+
+    if (!isClickInsidePopup) {
+        popup.style.display = 'none';
+        // Remove the event listener after closing the popup
+        document.removeEventListener('click', closePopupOutside);
+    }
+}
+</script>
+
+    </div>
+    
+    
+
+</div>
+    
+  </body>
+</html>
