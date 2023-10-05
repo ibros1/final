@@ -15,10 +15,15 @@ body.dark-mode .sidebar {
 /* .body.dark-mode #courses{
   background-color:#097025 ;
 } */
-body.dark-mode .sideprofile{
+
+
+/* body.dark-mode .sideprofile{
   margin-top: 20px;
   margin-bottom: 20px;
-}
+} */
+
+
+
 body.dark-mode .desc{
   margin-left: 10px;
 }
@@ -67,3 +72,12 @@ body.dark-mode #profiletype{
 .sun.sun-opacity {
   opacity: 0;
 }
+/* @media (max-width: 768px) {
+  body.dark-mode .profileEl{
+border: #ffffff;
+  }
+  body.dark-mode .header{
+    box-shadow: #ffffff;
+  }
+  
+} */
