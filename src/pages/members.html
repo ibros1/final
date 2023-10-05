@@ -21,29 +21,17 @@
     />
     <link rel="stylesheet" href="../main.css"></link>
       <link rel="stylesheet" href="../darkmode.css">
+      <link rel="stylesheet" href="../membersResponsive.css">
+    
       <link rel="stylesheet" href="../main.css">
     <script src="../darkmode.js"></script>
+     <script src="../sidebar.js"></script>
     <script src="../search.js"></script>
     <script src="../cart.js"></script>
     <script src="../notification.js"></script>
+    <script src="../inbox.js"></script>
   </head>
-  <style>
-    li {
-      list-style: none;
-    }
-    .sidebar {
-      background-color: white;
-      box-shadow: 0px 4px 600px -1px rgba(0, 0, 0, 0.1),
-        0px 2px 400px -1px rgba(0, 0, 0, 0.06);
-      width: 20%;
-      z-index: 10;
-      visibility: visible;
-      overflow-y: auto;
-      height: calc(100vh - 0px);
-      position: fixed;
-      overflow-x: hidden;
-    }
-  </style>
+  
   <body class="flex flex-col" id="body">
 
 <div class="container  bg-white absolute ">
@@ -176,13 +164,25 @@
     </div>
 
 
-   <div id="cartPopup" class="cartPopup fixed inset-0 flex items-center justify-center hidden">
+<div id="cartPopup" class="cartPopup fixed inset-0 flex items-center justify-center hidden">
     <div class="bg-white p-6 rounded-lg max-w-sm shadow-xl border-2 mt-[-230px] ml-[200px] w-[600px]">
       <h2 class="text-xl font-semibold mb-4">Cart</h2>
       <p class="bg-gray-100 px-12 rounded-full py-4">No products in the cart.</p>
       <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full closeCart" onclick="closeCartPopup()">Close</button>
     </div>
   </div>
+
+ <div id="searchPopup" class="fixed   inset-0 backdrop-blur-md  z-50  hidden">
+    <div class="bg-[#FAFAFC] rounded-lg p-6 w-[100%] h-[80px] ">
+     
+      <!-- <input id="searchInput" type="text" class=" border-gray-300 p-2 w-full items-center outline-none bb-icon-search " placeholder="Search..." /> -->
+         
+          <input id="demo" type="text" placeholder="Search..." class=" py-2 px-4 w-[60%]   rounded-xl focus:outline-none focus:border-blue-500 transition-colors duration-300 focus:placeholder-transparent placeholder-gray-500 hover:border-green-500 fixed  bg-[#F2F4F5] focus:border-green-500 border-2 ml-[300px] ">
+          <i onclick="closeSearchPopup()" class="bb-icon-times text-4xl text-gray-600 cursor-pointer closeSearch lg:ml-[1250px]"></i>
+        
+    </div>
+  </div>
+
    <div id="NotificationPopup" class=" hidden notificationPopup fixed inset-0 flex items-center justify-center ml-[400px] ">
     <div class="bg-white p-6 rounded-lg max-w-sm shadow-xl border-2 mt-[40px]  w-[600px] h-[500px]">
       <h2 class="text-xl font-semibold mb-4 from-neutral-800 text-[28px]">Notifications</h2>
@@ -227,25 +227,68 @@
     </div>
   </div>
 
+<div id="inboxPopup" class="inboxPopup fixed inset-0 flex items-center justify-center z-50 hidden">
+  <div class="bg-white p-6 rounded-lg max-w-sm shadow-xl border-2 mt-[60px]  w-[7000px] h-[550px] ml-[600px] ">
+      <h2 class="text-xl font-semibold mb-4 from-neutral-800 text-[28px]">Messages</h2>
+      <hr>
+      <div class="container mt-[10px]">
+        <div class="cloumns">
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/19/621e22610fbc7-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Abdinasir Mohamud <span class="text-gray-400 font-normal">3hrs ago</span> </h1>
+              <div class="flex">
+              <img src="http://127.0.0.1:5502/public/images/profilenobg.png" class="w-[30px] h-[30px]">
+             <p class="text-gray-400">Hello cypher Yes i will make that</p>
+             </div>
+             </div>
+               </div>
+                
+          </div>
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/5/621e24af08ca9-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Emilia <span class="text-gray-400 font-normal">3days ago</span> </h1>
+             <div class="flex">
+              <img src="http://127.0.0.1:5502/public/images/profilenobg.png" class="w-[30px] h-[30px]">
+             <p class="text-gray-400">Where is the camera,did you forget it.</p>
+             </div>
+             </div>
+               </div>
+                
+          </div>
+          <div class="col1 ml-[-20px] ">
+             <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
+              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/17/621e243cea28e-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+           <div>
+              <h1 class="font-semibold text-[18px]">Hassan Abdi <span class="text-gray-400 font-normal">3min ago</span></h1>
+              <div class="flex">
+              <img src="http://127.0.0.1:5502/public/images/profilenobg.png" class="w-[30px] h-[30px]">
+             <p class="text-gray-400">Yes, i have been send the video for you!</p>
+             </div>
+             </div>
+               </div>
+                
+          </div>
 
+        </div>
 
-  
-       <div id="searchPopup" class="fixed   inset-0 backdrop-blur-md  z-50 hidden">
-    <div class="bg-[#FAFAFC] rounded-lg p-6 w-[100%] h-[80px] ">
-     
-      <!-- <input id="searchInput" type="text" class=" border-gray-300 p-2 w-full items-center outline-none bb-icon-search " placeholder="Search..." /> -->
-          <input id="demo" type="text" placeholder="Search..." class=" py-2 px-4 w-[60%]   rounded-xl focus:outline-none focus:border-blue-500 transition-colors duration-300 focus:placeholder-transparent placeholder-gray-500 hover:border-green-500 fixed  bg-[#F2F4F5] focus:border-green-500 border-2 ml-[300px] ">
-          <div class=" ">
-      <i onclick="closeSearchPopup()" class="bb-icon-times text-4xl text-gray-600 cursor-pointer ml-[1250px]"></i>
       </div>
+   
+   <div class="grid grid-cols-2 gap-2 mt-10">
+ <a href="./messages.html">
+      <button class=" bg-blue-500 hover:bg-blue-600 text-white font-semibold text-[18px] py-4  px-6  closeCart" onclick="closeInboxPopup()"> All Messages</button></a>
+      <button class=" bg-red-500 hover:bg-red-600 text-white font-semibold text-[20px] py-4 px-6 closeCart" onclick="closeInboxPopup()"> Close</button></div>
     </div>
   </div>
-<div class="ml-48 w-full">
+<div class="pl-48 w-full " id="durug">
     <div
       class="header bg-white w-full  h-[80px] shadow-sm flex fixed  "
       id="header"
     >
-      <i class="bb-icon-bars-2 lg:hidden bars hover:bg-gray-100 rounded-lg"></i>
+      <i class="bb-icon-bars-2  bars p-2 mb-2 pt-4  hover:bg-gray-100 rounded-lg" onclick="openSide()"></i>
 
       <div class="logo w-[160px] m-4 cursor-pointer">
         <!-- <img src="../public/images/Untitled-1 - Copy.png" class="" /> -->
@@ -253,7 +296,7 @@
       <div
         class="header-container flex gap-4 text-center justify-center align-center text-[18px] text-[black] mt-4 mb-4  "
       >
-        <a href="./Home.html" data-tooltip="Home" class="hover:bg-gray-100 rounded-md">
+        <a href="./Home.html" data-tooltip="Home" class="hover:bg-gray-100 rounded-md bg-gray-100">
           <i class=""></i>
           <h1 class="px-2 py-2">Home</h1></a
         >
@@ -261,7 +304,7 @@
           <i class=""></i>
           <h1 class="px-2 py-2">Courses</h1></a
         >
-        <a href="./members.html" data-tooltip="Members" class="hover:bg-gray-100 rounded-md  bg-gray-100 ">
+        <a href="./members.html" data-tooltip="Members" class="hover:bg-gray-100 rounded-md">
           <i class=""></i>
           <h1 class="px-2 py-2">Members</h1></a
         >
@@ -270,7 +313,7 @@
           <h1 class="px-2 py-2">Contact</h1></a
         >
       </div>
-      <div class="features">
+      <div class="features sm:mt-6 lg:-mt-0">
         <div
           class="navfeatures lg:ml-[20px] lg:mr-[40px] flex justify-center text-center mt-4"
         >
@@ -279,42 +322,43 @@
               class="bb-icon-search text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 search"
             onclick="openSearchPopup() "></i>
           </li>
-          <li data-tooltip="" id="sunIcon" onclick="toggleDarkMode()">
-            <i
-              class="bb-icon-sun text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 sun"
-            ></i>
-          </li>
           <li
-            data-tooltip=""
-            id="moonIcon"
-            class="hidden moon"
-            onclick="toggleDarkMode()"
-          >
-            <i class="bb-icon-moon"></i>
-          </li>
+  data-tooltip=""
+  id="sunIcon"
+  onclick="toggleDarkMode()"
+>
+  <i class="bb-icon-sun text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 sun"></i>
+</li>
+<li
+  data-tooltip=""
+  id="moonIcon"
+  class="hidden moon"
+  onclick="toggleDarkMode()"
+>
+  <i class="bb-icon-moon"></i>
+</li>
 
           <li data-tooltip="">
             <i
               class="bb-icon-shopping-cart text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 cart"
-           id="cartIcon" class="cart-icon" onclick="showCartPopup()" ></i>
+           onclick="showCartPopup()" ></i>
           </li>
 
           <li data-tooltip="">
             <i
-              class="NotificationIcon bb-icon-bell text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
-            onclick="showNotiPopup()"></i>
-            <span id="notificationCounter">3</span>
+              class="bb-icon-bell text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
+             onclick="showNotiPopup()"></i>
           </li>
 
           <li data-tooltip="">
             <i
               class="bb-icon-inbox text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
-            ></i>
+            onclick="showInboxPopup()"></i>
           </li>
         </div>
       </div>
 
-      <div class="flex items-center bg-yellow-400 cursor-pointer rounded-3xl shadow-sm hover:border-2 hover:border-green-300 border-2 border-white mt-2 mb-2 p-4 transition duration-300 ease-in-out" onclick="showPopup()">
+      <div class="profileEl flex items-center bg-yellow-400 cursor-pointer rounded-3xl lg:shadow-sm hover:border-2 hover:border-green-300 border-2 border-white sm:-pl-4 mt-2 mb-2 p-4 transition duration-300 ease-in-out" onclick="showPopup()">
   <div class="flex items-center">
     <h3 class="text-md font-semibold">إبراهيم محمد أحمد</h3>
     <div class="profilePicture w-12 h-12 ml-4">
@@ -355,6 +399,7 @@ function closePopupOutside(event) {
 </script>
 
     </div>
+
     
     
 
@@ -367,7 +412,7 @@ function closePopupOutside(event) {
     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div class="">
       <div class="pt-[-40px] mt-4 ">
-  <i class="bb-icon-search absolute top-3 left-3 text-gray-500"></i>
+  <!-- <i class="bb-icon-search absolute top-3 left-3 text-gray-500"></i> -->
   <input type="search" id="default-search" class="block w-full border-2 outline-none py-3 px-8 rounded-lg" placeholder="Search any member..." required>
 </div>
 

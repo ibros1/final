@@ -22,7 +22,7 @@ body.dark-mode .sidebar {
   margin-bottom: 20px;
 } */
 
-body.
+
 
 body.dark-mode .desc{
   margin-left: 10px;
@@ -72,3 +72,12 @@ body.dark-mode #profiletype{
 .sun.sun-opacity {
   opacity: 0;
 }
+/* @media (max-width: 768px) {
+  body.dark-mode .profileEl{
+border: #ffffff;
+  }
+  body.dark-mode .header{
+    box-shadow: #ffffff;
+  }
+  
+} */
