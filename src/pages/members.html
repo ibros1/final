@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../main.css"></link>
       <link rel="stylesheet" href="../darkmode.css">
       <link rel="stylesheet" href="../membersResponsive.css">
+      <link rel="stylesheet" href="../resposive.css">
     
       <link rel="stylesheet" href="../main.css">
     <script src="../darkmode.js"></script>
@@ -34,8 +35,8 @@
   
   <body class="flex flex-col" id="body">
 
-<div class="container  bg-white absolute ">
-      <div class="sidebar  " onclick="(closeIocn)" id="sidebar">
+<div class="desketopContainer  bg-white absolute ">
+      <div class="desksidebar  md:visible "  id="sidebar">
         <div class="logo ml-6 py-[14px]">
           <a href="./Home.html">
             <img
@@ -43,6 +44,135 @@
               href="/"
               class="w-[180px] cursor-pointer"
           /></a>
+          <div class="close mt-[10px] text-[33px]">
+            <i class="bb-icon-times cursor-pointer hidden" id="close"></i>
+          </div>
+        </div>
+        <hr class= />
+        <div class="sideprofile flex -py-3">
+          <img
+            src="../../public/images/profilenobg.png"
+            class="w-[100px] rounded-full cursor-pointer"
+          />
+          <div class="desc">
+            <div class="verfied flex mt-5">
+              <h3 class="font-semibold hover:text-blue-600 cursor-pointer">
+                Eng Cypher
+              </h3>
+              <img
+                src="../../public/images/verified.png"
+                data-tooltip="Verfied"
+                class="w-5 h-5 ml-2 mt-1 cursor-pointer"
+              />
+            </div>
+            <div></div>
+            <p class="text-gray-400">@ibro</p>
+          </div>
+        </div>
+        <hr />
+        <div
+          class="side container flex flex-col ml-[10px] mr-[10px] text-black overflow-x-auto mt-[30px]"
+        >
+     <a href="../pages/Home.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-home w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Home</span>
+            </li></a
+          >
+       <a href="./profile.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-user w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">My Profile</span>
+            </li></a
+          >
+         
+          <a href="./my courses.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-graduation-cap w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">My Courses</span>
+            </li></a
+          >
+             <a href="./members.html">
+            <li
+              id="showIcon"
+              class="bg-[#FFD700] rounded-md py-2 px-2 mr-4 cursor-pointer"
+            >
+              <i
+                class="_mi _before bb-icon-f buddyboss bb-icon-users text-white w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="text-white font-semibold sidebar-name">Members</span>
+            </li></a
+          >
+        
+       
+          
+          <h3
+            class="text-left ml-[10px] font-semibold text-[#7F7F7F] mt-4 sidebar-heading"
+          >
+            <span class="sidebar-text">SETTINGS</span>
+          </h3>
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-cog w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Account</span>
+            </li></a
+          >
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-sign-out w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Log out</span>
+            </li></a
+          >
+        </div>
+      </div>
+    </div>
+<div class="container  bg-white absolute ">
+     <div class="sidebar  hidden md:hidden"  id="sidebar">
+         <div class="logo ml-6 py-[14px] flex">
+          <a href="./Home.html">
+            <img
+              src="../../public/images/real logo Surmad.png"
+              href="/"
+              class="w-[180px] cursor-pointer"
+          /></a>
+           <i class="bb-icon-times sm:visible md:visible lg:hidden closeSide" onclick="closeSide()"></i>
           <div class="close mt-[10px] text-[33px]">
             <i class="bb-icon-times cursor-pointer hidden" id="close"></i>
           </div>
@@ -404,8 +534,8 @@ function closePopupOutside(event) {
     
 
 </div>
-<div class="ml-[300px] ">
-    <div class="mx-auto w-[90%] my-4 flex  mt-[100px] ml-[16px] ">
+<div class="ml-[10px] md:ml-[300px] ">
+    <div class="mx-auto w-[90%] my-4 flex flex-col md:flex  mt-[100px] ml-[16px] ">
         <h1 class="text-[36px]">Members</h1>
     </div>  
 <form class="mr-[20px] ml-[18px]">   
@@ -419,7 +549,7 @@ function closePopupOutside(event) {
 </form>
    
    
-    <div class="flex">
+    <div class="flex ">
       <li class="membersCount"></li>
 </div>
     <style>
@@ -432,12 +562,14 @@ function closePopupOutside(event) {
   }
 </style>
      <div class="members ">
-      <div class="container">
-        <div class="cards mt-20 ml-4 grid grid-cols-3">
-     <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
-  <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
+      <div class="container ml-[40px] md:ml-[20px]">
+        <div class="cards mt-8 md:mt-20 md:ml-4 grid grid-cols-1 md:grid-cols-3 gap-8 ">
+
+
+     <div class="card1 border-2 rounded-lg w-[450px] md:w-[300px] h-[400px] hover:shadow-xl ">
+  <i class="bb-icon-ellipsis-h ml-[350px] md:ml-[250px] text-[30px] cursor-pointer"></i>
   <!-- <h3 class="text-center flex justify-center text-[30px]">ORGNIZER</h3> -->
-  <span class="member-status online"></span> <!-- Green online indicator -->
+  <span class="member-status online ml-0 md:ml-[-176px]"></span> <!-- Green online indicator -->
   <style>
   .member-status.online {
   position: absolute;
@@ -449,13 +581,18 @@ function closePopupOutside(event) {
   top: -10px; /* Adjust this value to position the indicator */
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 380px;
-  margin-left: -140px;
+  margin-top: 376px;
+  margin-left: -142px;
  
   border: 2px solid white;
+}@media (max-width: 768px) {
+   .member-status.online {
+     margin-top: 326px;
+  margin-left: 40px;
+   }
 }
 </style>
-  <div class="profile  cursor-pointer flex flex-col justify-center items-center ml-[20px] ">
+  <div class="profile  cursor-pointer flex flex-col justify-center items-center md:ml-[20px] ">
     <img src="../../public/images/profilenobg.png" alt="Profile Image" class="rounded-full flex justify-center items-center -mt-6 w-[300px] ">
     <div class="bg-blue-600 -mt-10 px-4 rounded-lg text-white font-semiboldS -ml-2"><span class="font-semibold " id="profiletype" >Admin</span></div>
     <div class="text-center">
@@ -464,18 +601,13 @@ function closePopupOutside(event) {
 إبراهيم محمد أحمد</h3>
     </div>
   </div>
-<div class=" ">
-  <div class="border-right">
-    <div class="grid grid-cols-2">
-   
 
-    </div>
-  </div>
-  </div>
 </div>
-     <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
-  <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
-  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
+     <div class="card1 border-2 rounded-lg  w-[450px] md:w-[300px] h-[400px] hover:shadow-xl">
+
+  <i class="bb-icon-ellipsis-h ml-[350px] md:ml-[250px] text-[30px] cursor-pointer"></i>
+  
+  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[120px] md:ml-[40px]">
     <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/2/621e2ce403550-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-yellow-400 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Student</span></div>
     <div class="text-center">
@@ -492,9 +624,9 @@ function closePopupOutside(event) {
   </div>
   </div>
 </div>
-     <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
-  <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
-  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
+     <div class="card1 border-2 rounded-lg w-[450px] md:w-[300px] h-[400px] hover:shadow-xl">
+  <i class="bb-icon-ellipsis-h ml-[350px] md:ml-[200px] text-[30px] cursor-pointer"></i>
+  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[120px] md:ml-[40px]">
     <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/19/621e22610fbc7-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-red-400 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Support</span></div>
     <div class="text-center">
@@ -515,10 +647,10 @@ function closePopupOutside(event) {
  
 
 </div>
-        <div class="cards mt-20 ml-4 grid grid-cols-3">
-     <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
-  <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
-  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
+      <div class="cards mt-8 md:mt-20 md:ml-4 grid grid-cols-1 md:grid-cols-3  gap-8">
+     <div class="card1 border-2 rounded-lg w-[450px] md:w-[300px] h-[400px] hover:shadow-xl">
+  <i class="bb-icon-ellipsis-h ml-[350px] md:ml-[250px] text-[30px] cursor-pointer"></i>
+  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[120px] md:ml-[40px]">
     <img src="https://hurbad.com/wp-content/uploads/avatars/38764/6347971dd5ec4-bpfull.jpg" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-yellow-400 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Student</span></div>
     <div class="text-center">
@@ -534,9 +666,9 @@ function closePopupOutside(event) {
   </div>
   </div>
 </div>
-     <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
-  <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
-  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
+     <div class="card1 border-2 rounded-lg  w-[450px] md:w-[300px] h-[400px] hover:shadow-xl">
+  <i class="bb-icon-ellipsis-h ml-[350px] md:ml-[250px] text-[30px] cursor-pointer"></i>
+  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[120px] md:ml-[40px]">
     <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/5/621e24af08ca9-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-black -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Teacher</span></div>
     <div class="text-center">
@@ -552,9 +684,9 @@ function closePopupOutside(event) {
   </div>
   </div>
 </div>
-     <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
-  <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
-  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
+     <div class="card1 border-2 rounded-lg w-[450px] md:w-[300px] h-[400px] hover:shadow-xl">
+  <i class="bb-icon-ellipsis-h ml-[350px] md:ml-[250px] text-[30px] cursor-pointer"></i>
+  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[120px] md:ml-[40px]">
     <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/13/621e287601267-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-red-400 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Support</span></div>
     <div class="text-center">
@@ -574,10 +706,11 @@ function closePopupOutside(event) {
  
 
 </div>
-        <div class="cards mt-20 ml-4 grid grid-cols-3">
-     <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
-  <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
-  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
+    
+     <div class="cards mt-8 md:mt-20 md:ml-4 grid grid-cols-1 md:grid-cols-3  gap-8">
+     <div class="card1 border-2 rounded-lg w-[450px] md:w-[300px] h-[400px] hover:shadow-xl">
+  <i class="bb-icon-ellipsis-h ml-[350px] md:ml-[250px] text-[30px] cursor-pointer"></i>
+  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[120px] md:ml-[40px]">
     <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/6/621e236d4e3c2-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-blue-600 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Worker</span></div>
     <div class="text-center">
@@ -593,9 +726,9 @@ function closePopupOutside(event) {
   </div>
   </div>
 </div>
-     <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
-  <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
-  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
+     <div class="card1 border-2 rounded-lg w-[450px] md:w-[300px] h-[400px] hover:shadow-xl">
+  <i class="bb-icon-ellipsis-h ml-[350px] md:ml-[250px] text-[30px] cursor-pointer"></i>
+  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[120px] md:ml-[40px]">
     <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/17/621e243cea28e-bpfull.png" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-yellow-400 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Student</span></div>
     <div class="text-center">
@@ -611,9 +744,9 @@ function closePopupOutside(event) {
   </div>
   </div>
 </div>
-     <div class="card1 border-2 rounded-lg w-[300px] h-[400px] hover:shadow-xl">
-  <i class="bb-icon-ellipsis-h ml-[250px] text-[30px] cursor-pointer"></i>
-  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[40px]">
+     <div class="card1 border-2 rounded-lg w-[450px] md:w-[300px] h-[400px] hover:shadow-xl">
+  <i class="bb-icon-ellipsis-h ml-[350px] md:ml-[250px] text-[30px] cursor-pointer"></i>
+  <div class="profile w-[200px] cursor-pointer flex flex-col justify-center items-center ml-[120px] md:ml-[40px]">
     <img src="https://hurbad.com/wp-content/uploads/avatars/1/62bc0a6fa9de0-bpfull.jpg" alt="Profile Image" class="rounded-full flex justify-center items-center mt-8 ">
     <div class="bg-green-400 -mt-4 px-4 rounded-lg text-white font-semiboldS ml-2"><span class="font-semibold " id="profiletype">Head Teacher</span></div>
     <div class="text-center">

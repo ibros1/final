@@ -721,6 +721,10 @@ video {
   margin-bottom: 40px;
 }
 
+.ml-0 {
+  margin-left: 0px;
+}
+
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -767,6 +771,10 @@ video {
 
 .ml-\[10px\] {
   margin-left: 10px;
+}
+
+.ml-\[120px\] {
+  margin-left: 120px;
 }
 
 .ml-\[1250px\] {
@@ -943,6 +951,10 @@ video {
 
 .mt-\[60px\] {
   margin-top: 60px;
+}
+
+.ml-\[280px\] {
+  margin-left: 280px;
 }
 
 .block {
@@ -1165,6 +1177,10 @@ video {
   cursor: pointer;
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1285,6 +1301,11 @@ video {
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.border-green-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(22 163 74 / var(--tw-border-opacity));
 }
 
 .border-white {
@@ -1516,6 +1537,10 @@ video {
 
 .pl-48 {
   padding-left: 12rem;
+}
+
+.pr-\[315px\] {
+  padding-right: 315px;
 }
 
 .pt-4 {
@@ -2049,6 +2074,14 @@ video {
     margin-left: 3.5rem;
   }
 
+  .md\:ml-4 {
+    margin-left: 1rem;
+  }
+
+  .md\:ml-\[-176px\] {
+    margin-left: -176px;
+  }
+
   .md\:ml-\[100px\] {
     margin-left: 100px;
   }
@@ -2065,8 +2098,24 @@ video {
     margin-left: 200px;
   }
 
+  .md\:ml-\[20px\] {
+    margin-left: 20px;
+  }
+
+  .md\:ml-\[250px\] {
+    margin-left: 250px;
+  }
+
+  .md\:ml-\[300px\] {
+    margin-left: 300px;
+  }
+
   .md\:ml-\[350px\] {
     margin-left: 350px;
+  }
+
+  .md\:ml-\[40px\] {
+    margin-left: 40px;
   }
 
   .md\:ml-\[480px\] {
@@ -2083,6 +2132,10 @@ video {
 
   .md\:mt-\[200px\] {
     margin-top: 200px;
+  }
+
+  .md\:mt-20 {
+    margin-top: 5rem;
   }
 
   .md\:flex {
@@ -2103,6 +2156,10 @@ video {
 
   .md\:w-\[1050px\] {
     width: 1050px;
+  }
+
+  .md\:w-\[300px\] {
+    width: 300px;
   }
 
   .md\:w-\[350px\] {
@@ -2128,6 +2185,16 @@ video {
   .md\:px-56 {
     padding-left: 14rem;
     padding-right: 14rem;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .md\:pl-32 {

@@ -8,7 +8,7 @@ function toggleDarkMode() {
   isDarkMode = !isDarkMode;
 
   if (isDarkMode) {
-    // Switch to dark mode
+  //Kadhig Madow
     sunIcon.classList.add('sun-opacity');
     moonIcon.classList.remove('hidden');
     moonIcon.classList.add('moon-opacity');

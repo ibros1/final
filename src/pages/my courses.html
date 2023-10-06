@@ -38,8 +38,9 @@
  
   <body class="flex flex-col" id="body">
 
-<div class="container  bg-white absolute ">
-      <div class="sidebar  " onclick="(closeIocn)" id="sidebar">
+<div class="desketopContainer  bg-white absolute ">
+          <div class="desksidebar  md:visible "  id="sidebar">
+
         <div class="logo ml-6 py-[14px]">
           <a href="./Home.html">
             <img
@@ -47,6 +48,137 @@
               href="/"
               class="w-[180px] cursor-pointer"
           /></a>
+          <div class="close mt-[10px] text-[33px]">
+            <i class="bb-icon-times cursor-pointer hidden" id="close"></i>
+          </div>
+        </div>
+        <hr class= />
+        <div class="sideprofile flex -py-3">
+          <img
+            src="../../public/images/profilenobg.png"
+            class="w-[100px] rounded-full cursor-pointer"
+          />
+          <div class="desc">
+            <div class="verfied flex mt-5">
+              <h3 class="font-semibold hover:text-blue-600 cursor-pointer">
+                Eng Cypher
+              </h3>
+              <img
+                src="../../public/images/verified.png"
+                data-tooltip="Verfied"
+                class="w-5 h-5 ml-2 mt-1 cursor-pointer"
+              />
+            </div>
+            <div></div>
+            <p class="text-gray-400">@ibro</p>
+          </div>
+        </div>
+        <hr />
+        <div
+          class="side container flex flex-col ml-[10px] mr-[10px] text-black  mt-[30px]"
+        >
+     <a href="../pages/Home.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-home w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Home</span>
+            </li></a
+          >
+            <a href="./profile.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-user w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">My Profile</span>
+            </li></a
+          >
+          <a href="./my courses.html">
+            <li
+              id="showIcon"
+              class="bg-[#FFD700] rounded-md py-2 px-2 mr-4 cursor-pointer"
+            >
+              <i
+                class="_mi _before bb-icon-f buddyboss bb-icon-graduation-cap text-white w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="text-white font-semibold sidebar-name">My Courses</span>
+            </li></a
+          >
+         
+        
+          <a href="./members.html">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-users w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Members</span>
+            </li></a
+          >
+        
+       
+          
+          <h3
+            class="text-left ml-[10px] font-semibold text-[#7F7F7F] mt-4 sidebar-heading"
+          >
+            <span class="sidebar-text">SETTINGS</span>
+          </h3>
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-cog w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Account</span>
+            </li></a
+          >
+          <a href="#">
+            <li
+              id="showIcon"
+              class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4"
+            >
+              <i
+                class="_mi _before bb-icon-l buddyboss bb-icon-sign-out w-5 h-5 text-[28px]"
+                aria-hidden="true"
+                id="bb"
+              ></i
+              ><span class="sidebar-name">Log out</span>
+            </li></a
+          >
+        </div>
+      </div>
+    </div>
+<div class="container  bg-white absolute ">
+         <div class="sidebar  hidden md:hidden"  id="sidebar">
+       
+       <div class="logo ml-6 py-[14px] flex">
+          <a href="./Home.html">
+            <img
+              src="../../public/images/real logo Surmad.png"
+              href="/"
+              class="w-[180px] cursor-pointer"
+          /></a>
+           <i class="bb-icon-times sm:visible md:visible lg:hidden closeSide" onclick="closeSide()"></i>
           <div class="close mt-[10px] text-[33px]">
             <i class="bb-icon-times cursor-pointer hidden" id="close"></i>
           </div>
@@ -290,7 +422,7 @@
     <div
       class="header bg-white w-full h-[80px] shadow-sm flex fixed" id="header"
     >
-      <i class="bb-icon-bars-2 lg:hidden bars hover:bg-gray-100 rounded-lg"></i>
+      <i class="bb-icon-bars-2 lg:hidden bars hover:bg-gray-100 rounded-lg" onclick="openSide()"></i>
 
       <div class="logo w-[160px] m-4 cursor-pointer">
         <!-- <img src="../public/images/Untitled-1 - Copy.png" class="" /> -->
@@ -462,12 +594,12 @@ function closePopupOutside(event) {
     
     </div>
   <div class="container pl-3 md:pl-32 mt-10 mb-4">
-<div class="Profilerows md:flex border p-4 mr-4 rounded-xl">
+<div class="Profilerows  md:flex border p-4 mr-4 rounded-xl">
   <a href="./profile.html">
-  <p class="py-2 px-6 bg-gray-100 rounded-lg font-semibold  hover:text-yellow-500 text-yellow-500">Profile</p>
+  <p class="py-2 px-6 hover:text-yellow-500 ">Profile</p>
   </a>
   <a href="./my courses.html">
-  <p class="py-2 px-6 hover:text-yellow-500  ">Courses </p>
+  <p class="py-2 px-6  bg-gray-100 rounded-lg font-semibold text-yellow-500 hover:text-yellow-500  ">Courses </p>
  </span>
   </a>
   <a href="#">
@@ -503,13 +635,13 @@ function closePopupOutside(event) {
 <div class="md:pl-32 pl-3 md:flex justify-between">
  
   <div class="">
-<div class=" mt-4 md:mt-10 mr-10 gap-4 md:flex sm:flex-col ">
-  <a class="py-2 px-6 border border-black rounded-lg cursor-pointer hover:bg-gray-100">My Courses</a>
+<div class=" mt-4 md:mt-10 mr-10 gap-4 md:flex  flex-col inline ">
+  <a class="py-2 px-6 border-2 border-green-600 rounded-lg cursor-pointer hover:bg-gray-100">My Courses</a>
   <a class="py-2 px-6 bg-gray-100 rounded-lg cursor-pointer border border-gray-100 hover:border hover:border-black">My Certificates</a>
 </div>
 </div>
-  <div class="mr-6">
-<input type="text" placeholder="Search your Course..." class="py-4 px-6 border-2 border-black rounded-lg mt-4 outline-none  ">
+  <div class="mr-6 mt-4">
+<input type="text" placeholder="Search your Course..." class="py-4 px-6 pr-[315px] md:py-4 md:px-6 border-2 border-black rounded-lg mt-4 outline-none  ">
 </div>
 
 <style>
