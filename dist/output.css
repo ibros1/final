@@ -765,6 +765,10 @@ video {
   margin-left: -60px;
 }
 
+.ml-\[-90px\] {
+  margin-left: -90px;
+}
+
 .ml-\[0px\] {
   margin-left: 0px;
 }
@@ -925,12 +929,12 @@ video {
   margin-top: -30px;
 }
 
-.mt-\[-52\.99px\] {
-  margin-top: -52.99px;
-}
-
 .mt-\[-59\.9px\] {
   margin-top: -59.9px;
+}
+
+.mt-\[-60\.99px\] {
+  margin-top: -60.99px;
 }
 
 .mt-\[100px\] {
@@ -963,62 +967,6 @@ video {
 
 .mt-\[60px\] {
   margin-top: 60px;
-}
-
-.mt-\[-54\.99px\] {
-  margin-top: -54.99px;
-}
-
-.mt-\[-56\.99px\] {
-  margin-top: -56.99px;
-}
-
-.mt-\[-60\.99px\] {
-  margin-top: -60.99px;
-}
-
-.ml-\[\] {
-  margin-left: ;
-}
-
-.ml-\[-400px\] {
-  margin-left: -400px;
-}
-
-.mr-\[400px\] {
-  margin-right: 400px;
-}
-
-.-mt-8 {
-  margin-top: -2rem;
-}
-
-.ml-\[-300px\] {
-  margin-left: -300px;
-}
-
-.ml-\[-80px\] {
-  margin-left: -80px;
-}
-
-.ml-\[-90px\] {
-  margin-left: -90px;
-}
-
-.mt-\[-120px\] {
-  margin-top: -120px;
-}
-
-.ml-8 {
-  margin-left: 2rem;
-}
-
-.ml-32 {
-  margin-left: 8rem;
-}
-
-.-ml-32 {
-  margin-left: -8rem;
 }
 
 .block {
@@ -1457,6 +1405,11 @@ video {
   background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
 .bg-green-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
@@ -1629,14 +1582,6 @@ video {
 
 .pt-\[30px\] {
   padding-top: 30px;
-}
-
-.pl-8 {
-  padding-left: 2rem;
-}
-
-.pl-80 {
-  padding-left: 20rem;
 }
 
 .text-left {
@@ -2154,6 +2099,10 @@ video {
     margin-left: -176px;
   }
 
+  .md\:ml-\[0px\] {
+    margin-left: 0px;
+  }
+
   .md\:ml-\[100px\] {
     margin-left: 100px;
   }
@@ -2194,8 +2143,8 @@ video {
     margin-left: 480px;
   }
 
-  .md\:mt-0 {
-    margin-top: 0px;
+  .md\:mr-\[40px\] {
+    margin-right: 40px;
   }
 
   .md\:mt-10 {
@@ -2214,44 +2163,8 @@ video {
     margin-top: 200px;
   }
 
-  .md\:mt-\[30px\] {
-    margin-top: 30px;
-  }
-
-  .md\:mt-\[50px\] {
-    margin-top: 50px;
-  }
-
-  .md\:mt-\[45px\] {
-    margin-top: 45px;
-  }
-
-  .md\:mt-\[48px\] {
-    margin-top: 48px;
-  }
-
-  .md\:mt-\[43px\] {
-    margin-top: 43px;
-  }
-
   .md\:mt-\[40px\] {
     margin-top: 40px;
-  }
-
-  .md\:mr-\[40px\] {
-    margin-right: 40px;
-  }
-
-  .md\:ml-\[-90px\] {
-    margin-left: -90px;
-  }
-
-  .md\:ml-\[90px\] {
-    margin-left: 90px;
-  }
-
-  .md\:ml-\[0px\] {
-    margin-left: 0px;
   }
 
   .md\:flex {
