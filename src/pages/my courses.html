@@ -32,6 +32,7 @@
     <script src="../cart.js"></script>
     <script src="../notification.js"></script>
     <script src="../inbox.js"></script>
+    <script src="../profile.js"></script>
     <link rel="stylesheet" href="../darkmode.css">
 
   </head>
@@ -326,7 +327,7 @@
         <div class="cloumns">
           <div class="col1 ml-[-20px] ">
              <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
-              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/19/621e22610fbc7-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+              <img src="../../public/images/johnProfile.png" class="w-[60px] rounded-full h-[60px]">
            <div>
               <h1 class="font-semibold text-[18px]">Abdinasir Mohamud</h1>
              <p class="text-gray-400">Has Accepted Your Freind Request.</p>
@@ -336,7 +337,7 @@
           </div>
           <div class="col1 ml-[-20px] ">
              <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
-              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/5/621e24af08ca9-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+              <img src="../../public/images/emilyProfile.png" class="w-[60px] rounded-full h-[60px]">
            <div>
               <h1 class="font-semibold text-[18px]">Emilia </h1>
              <p class="text-gray-400">Has sent you a message.</p>
@@ -346,7 +347,7 @@
           </div>
           <div class="col1 ml-[-20px] ">
              <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
-              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/17/621e243cea28e-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+              <img src="../../public/images/JosephProfile.png" class="w-[60px] rounded-full h-[60px]">
            <div>
               <h1 class="font-semibold text-[18px]">Hassan Abdi</h1>
              <p class="text-gray-400">Has reply a comment on your video.</p>
@@ -370,11 +371,11 @@
         <div class="cloumns">
           <div class="col1 ml-[-20px] ">
              <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
-              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/19/621e22610fbc7-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+              <img src="../../public/images/johnProfile.png" class="w-[60px] rounded-full h-[60px]">
            <div>
               <h1 class="font-semibold text-[18px]">Abdinasir Mohamud <span class="text-gray-400 font-normal">3hrs ago</span> </h1>
               <div class="flex">
-              <img src="http://127.0.0.1:5502/public/images/profilenobg.png" class="w-[30px] h-[30px]">
+              <img src="../../public/images/profile.jpg" class="w-[30px] h-[30px]">
              <p class="text-gray-400">Hello cypher Yes i will make that</p>
              </div>
              </div>
@@ -383,11 +384,11 @@
           </div>
           <div class="col1 ml-[-20px] ">
              <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
-              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/5/621e24af08ca9-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+              <img src="../../public/images/emilyProfile.png" class="w-[60px] rounded-full h-[60px]">
            <div>
               <h1 class="font-semibold text-[18px]">Emilia <span class="text-gray-400 font-normal">3days ago</span> </h1>
              <div class="flex">
-              <img src="http://127.0.0.1:5502/public/images/profilenobg.png" class="w-[30px] h-[30px]">
+              <img src="../../public/images/profile.jpg" class="w-[30px] h-[30px]">
              <p class="text-gray-400">Where is the camera,did you forget it.</p>
              </div>
              </div>
@@ -396,11 +397,11 @@
           </div>
           <div class="col1 ml-[-20px] ">
              <div class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full">
-              <img src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/17/621e243cea28e-bpfull.png" class="w-[60px] rounded-full h-[60px]">
+              <img src="../../public/images/mateoProfile.png" class="w-[60px] rounded-full h-[60px]">
            <div>
               <h1 class="font-semibold text-[18px]">Hassan Abdi <span class="text-gray-400 font-normal">3min ago</span></h1>
               <div class="flex">
-              <img src="http://127.0.0.1:5502/public/images/profilenobg.png" class="w-[30px] h-[30px]">
+              <img src="../../public/images/profile.jpg" class="w-[30px] h-[30px]">
              <p class="text-gray-400">Yes, i have been send the video for you!</p>
              </div>
              </div>
@@ -418,6 +419,55 @@
       <button class=" bg-red-500 hover:bg-red-600 text-white font-semibold text-[20px] py-4 px-6 closeCart" onclick="closeInboxPopup()"> Close</button></div>
     </div>
   </div>
+ <div id="profilePopup" class=" profilePopup ml-[800px] shadow-2xl hidden"> 
+  <div id="profilePopup" class="  fixed flex justify-center ml-[1050px] mt-[40px]  inset-0 "> 
+    <div class="bg-white px-2 pt-4 rounded-lg max-w-sm shadow-2xl  mt-[40px]  w-[300px] h-[500px] border">
+    
+    <div class="profileEl hover:bg-gray-100 cursor-pointer  w-full rounded-md">
+      <div class="flex gap-2">
+      <img src="../../public/images/profilenobg.png" class="w-[80px] ">
+      <div class="flex flex-col">
+      <p class=" mt-4  flex  font-semibold">
+إبراهيم محمد أحمد</p>
+<p class="ml-px] ">@ibro</p>
+</div>
+</div>
+
+
+
+    </div>
+    <div class="pSideBar ">
+  <div class="navs1 flex gap-2  hover:bg-gray-100 rounded-md cursor-pointer px-4   py-2">
+      <li class="bb-icon-user text-[25px] "></li>
+        <a class="font-normal text-[18px] mt-2">Profile</a>
+      </div>
+  <div class="navs1 flex gap-2 hover:bg-gray-100 rounded-md cursor-pointer px-4  py-2">
+      <li class="bb-icon-cog text-[25px]"></li>
+        <a class="font-normal text-[18px] mt-2">Acoount</a>
+      </div>
+  <div class="navs1 flex gap-2 hover:bg-gray-100 rounded-md cursor-pointer px-4  py-2">
+      <li class="bb-icon-server text-[25px]"></li>
+        <a class="font-normal text-[18px] mt-2">Services</a>
+      </div>
+  <div class="navs1 flex gap-2 hover:bg-gray-100 rounded-md cursor-pointer px-4  py-2">
+      <li class="bb-icon-graduation-cap text-[25px]"></li>
+        <a class="font-normal text-[18px] mt-2">Courses</a>
+      </div>
+  <div class="navs1 flex gap-2 hover:bg-gray-100 rounded-md cursor-pointer px-4  py-2">
+      <li class="bb-icon-users text-[25px]"></li>
+        <a class="font-normal text-[18px] mt-2">Groups</a>
+      </div>
+  <div class="navs1 flex gap-2 hover:bg-gray-100 rounded-md cursor-pointer px-4  py-2">
+      <li class="bb-icon-sign-out text-[25px]"></li>
+        <a class="font-normal text-[18px] mt-2">Logout</a>
+      </div>
+
+     <button class="ml-4 mt-4 bg-blue-600 text-white font-semibold rounded-lg w-[90px] py-4 px-6 closeProfilePopup" onclick="closeProfilePopup() "> Close</button>
+    </div>
+     
+    </div>
+  </div>
+</div>
 <div class="pl-48 w-full" id="durug">
     <div
       class="header bg-white w-full h-[80px] shadow-sm flex fixed" id="header"
@@ -434,7 +484,7 @@
           <i class=""></i>
           <h1 class="px-2 py-2">Home</h1></a
         >
-        <a href="./courses.html" data-tooltip="Courses" class="hover:bg-gray-100 bg-gray-100 rounded-md">
+        <a href="./courses.html" data-tooltip="Courses" class="hover:bg-gray-100 bg-gray-100 rounded-md now">
           <i class=""></i>
           <h1 class="px-2 py-2">Courses</h1></a
         >
@@ -492,7 +542,7 @@
         </div>
       </div>
 
-       <div class="profileEl flex items-center bg-yellow-400 cursor-pointer rounded-3xl lg:shadow-sm hover:border-2 hover:border-green-300 border-2 border-white sm:-pl-4 mt-2 mb-2 p-4 transition duration-300 ease-in-out" onclick="showPopup()">
+       <div class="profileEl flex items-center bg-yellow-400 cursor-pointer rounded-3xl lg:shadow-sm hover:border-2 hover:border-green-300 border-2 border-white sm:-pl-4 mt-2 mb-2 p-4 transition duration-300 ease-in-out" onclick="showProfilePopup()">
   <div class="flex items-center">
     <h3 class="text-md font-semibold">إبراهيم محمد أحمد</h3>
     <div class="profilePicture w-12 h-12 ml-4">
@@ -599,7 +649,7 @@ function closePopupOutside(event) {
   <p class="py-2 px-6 hover:text-yellow-500 ">Profile</p>
   </a>
   <a href="./my courses.html">
-  <p class="py-2 px-6  bg-gray-100 rounded-lg font-semibold text-yellow-500 hover:text-yellow-500  ">Courses </p>
+  <p class="py-2 px-6  bg-gray-100 rounded-lg font-semibold text-yellow-500 hover:text-yellow-500  now">Courses </p>
  </span>
   </a>
   <a href="#">

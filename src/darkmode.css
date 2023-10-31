@@ -21,9 +21,40 @@ body.dark-mode .sidebar {
   margin-top: 20px;
   margin-bottom: 20px;
 } */
+.logo img{
+width: 200px;
+}
+body.dark-mode .hero  {
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+body.dark-mode input{
+  color: black;
+}
+body.dark-mode #searchPopup,body.dark-mode #cartPopup, body.dark-mode #NotificationPopup, body.dark-mode #inboxPopup, body.dark-mode #profilePopup{
+  background-color: transparent !important;
+}
+body.dark-mode #cartPopup p{
+  color: black;
+}
+body.dark-mode .logo img {
+  /* content: url(../../public/images/dark-logo.png); */
+  width: 200px;
+}
+body.dark-mode .Profilerows p.now{
+ background-color: #EAB310;
+}
+body.dark-mode .header-container a {
+  background-color: transparent !important;
+  border: 2px solid transparent !important;
+}
+body.dark-mode .header-container a:hover {
+ border: 2px solid yellow !important;
 
-
-
+}
+body.dark-mode .header-container .now{
+border: 2px solid yellow !important;
+}
 body.dark-mode .desc{
   margin-left: 10px;
 }
