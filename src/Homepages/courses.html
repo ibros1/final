@@ -21,6 +21,11 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Plus+Jakarta+Sans:wght@600&display=swap"
     rel="stylesheet"
   />
+  <script src="../search.js"></script>
+  <script src="../sidebar.js"></script>
+  <script src="../cart.js"></script>
+  <script src="../notification.js"></script>
+  <script src="../inbox.js"></script>
   <link rel="stylesheet" href="../src/resposive.css" />
   <style>
     li {
@@ -29,7 +34,221 @@
   </style>
   <body>
     <div
-      class="header bg-white w-[100%] h-[80px] shadow-sm flex fixed mt-[-200px]"
+      id="cartPopup"
+      class="cartPopup fixed inset-0 flex items-center justify-center hidden"
+    >
+      <div
+        class="bg-white p-6 rounded-lg max-w-sm shadow-xl border-2 mt-[-230px] ml-[200px] w-[600px]"
+      >
+        <h2 class="text-xl font-semibold mb-4">Cart</h2>
+        <p class="bg-gray-100 px-12 rounded-full py-4">
+          No products in the cart.
+        </p>
+        <button
+          class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full closeCart"
+          onclick="closeCartPopup()"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <div id="searchPopup" class="fixed inset-0 backdrop-blur-md z-50 hidden">
+      <div class="bg-[#FAFAFC] rounded-lg p-6 w-[100%] h-[80px]">
+        <!-- <input id="searchInput" type="text" class=" border-gray-300 p-2 w-full items-center outline-none bb-icon-search " placeholder="Search..." /> -->
+
+        <input
+          id="demo"
+          type="text"
+          placeholder="Search..."
+          class="py-2 px-4 w-[60%] rounded-xl focus:outline-none focus:border-blue-500 transition-colors duration-300 focus:placeholder-transparent placeholder-gray-500 hover:border-green-500 fixed bg-[#F2F4F5] focus:border-green-500 border-2 ml-[300px]"
+        />
+        <i
+          onclick="closeSearchPopup()"
+          class="bb-icon-times text-4xl text-gray-600 cursor-pointer closeSearch lg:ml-[1250px]"
+        ></i>
+      </div>
+    </div>
+
+    <div
+      id="NotificationPopup"
+      class="hidden notificationPopup fixed inset-0 flex items-center justify-center ml-[400px]"
+    >
+      <div
+        class="bg-white p-6 rounded-lg max-w-sm shadow-xl border-2 mt-[40px] w-[600px] h-[500px]"
+      >
+        <h2 class="text-xl font-semibold mb-4 from-neutral-800 text-[28px]">
+          Notifications
+        </h2>
+        <hr />
+        <div class="container mt-[30px]">
+          <div class="cloumns">
+            <div class="col1 ml-[-20px]">
+              <div
+                class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full"
+              >
+                <img
+                  src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/19/621e22610fbc7-bpfull.png"
+                  class="w-[60px] rounded-full h-[60px]"
+                />
+                <div>
+                  <h1 class="font-semibold text-[18px]">Abdinasir Mohamud</h1>
+                  <p class="text-gray-400">Has Accepted Your Freind Request.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col1 ml-[-20px]">
+              <div
+                class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full"
+              >
+                <img
+                  src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/5/621e24af08ca9-bpfull.png"
+                  class="w-[60px] rounded-full h-[60px]"
+                />
+                <div>
+                  <h1 class="font-semibold text-[18px]">Emilia</h1>
+                  <p class="text-gray-400">Has sent you a message.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col1 ml-[-20px]">
+              <div
+                class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full"
+              >
+                <img
+                  src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/17/621e243cea28e-bpfull.png"
+                  class="w-[60px] rounded-full h-[60px]"
+                />
+                <div>
+                  <h1 class="font-semibold text-[18px]">Hassan Abdi</h1>
+                  <p class="text-gray-400">
+                    Has reply a comment on your video.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full closeCart"
+          onclick="closeNotifiPopup()"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="inboxPopup"
+      class="inboxPopup fixed inset-0 flex items-center justify-center z-50 hidden"
+    >
+      <div
+        class="bg-white p-6 rounded-lg max-w-sm shadow-xl border-2 mt-[60px] w-[7000px] h-[550px] ml-[600px]"
+      >
+        <h2 class="text-xl font-semibold mb-4 from-neutral-800 text-[28px]">
+          Messages
+        </h2>
+        <hr />
+        <div class="container mt-[10px]">
+          <div class="cloumns">
+            <div class="col1 ml-[-20px]">
+              <div
+                class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full"
+              >
+                <img
+                  src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/19/621e22610fbc7-bpfull.png"
+                  class="w-[60px] rounded-full h-[60px]"
+                />
+                <div>
+                  <h1 class="font-semibold text-[18px]">
+                    Abdinasir Mohamud
+                    <span class="text-gray-400 font-normal">3hrs ago</span>
+                  </h1>
+                  <div class="flex">
+                    <img
+                      src="http://127.0.0.1:5502/public/images/profilenobg.png"
+                      class="w-[30px] h-[30px]"
+                    />
+                    <p class="text-gray-400">
+                      Hello cypher Yes i will make that
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col1 ml-[-20px]">
+              <div
+                class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full"
+              >
+                <img
+                  src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/5/621e24af08ca9-bpfull.png"
+                  class="w-[60px] rounded-full h-[60px]"
+                />
+                <div>
+                  <h1 class="font-semibold text-[18px]">
+                    Emilia
+                    <span class="text-gray-400 font-normal">3days ago</span>
+                  </h1>
+                  <div class="flex">
+                    <img
+                      src="http://127.0.0.1:5502/public/images/profilenobg.png"
+                      class="w-[30px] h-[30px]"
+                    />
+                    <p class="text-gray-400">
+                      Where is the camera,did you forget it.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col1 ml-[-20px]">
+              <div
+                class="desc flex gap-4 justify-left py-4 px-6 rounded-lg cursor-pointer hover:bg-[#F8F9FA] w-full"
+              >
+                <img
+                  src="https://online-communities.demos.buddyboss.com/wp-content/sandbox228313-uploads/avatars/17/621e243cea28e-bpfull.png"
+                  class="w-[60px] rounded-full h-[60px]"
+                />
+                <div>
+                  <h1 class="font-semibold text-[18px]">
+                    Hassan Abdi
+                    <span class="text-gray-400 font-normal">3min ago</span>
+                  </h1>
+                  <div class="flex">
+                    <img
+                      src="http://127.0.0.1:5502/public/images/profilenobg.png"
+                      class="w-[30px] h-[30px]"
+                    />
+                    <p class="text-gray-400">
+                      Yes, i have been send the video for you!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 mt-10">
+          <a href="./messages.html">
+            <button
+              class="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-[18px] py-4 px-6 closeCart"
+              onclick="closeInboxPopup()"
+            >
+              All Messages
+            </button></a
+          >
+          <button
+            class="bg-red-500 hover:bg-red-600 text-white font-semibold text-[20px] py-4 px-6 closeCart"
+            onclick="closeInboxPopup()"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="header bg-white w-[100%] h-[80px] shadow-sm flex fixed"
       id="header"
     >
       <i class="bb-icon-bars-2 lg:hidden bars hover:bg-gray-100 rounded-lg"></i>
@@ -38,7 +257,7 @@
         <img src="../../public/images/real logo Surmad.png" class="" />
       </div>
       <div
-        class="header-container flex gap-8 text-center justify-center align-center ml-[80px] mt-[25px] text-[20px] text-[#6F7F92]"
+        class="header-container flex gap-8 text-center justify-center align-center ml-[160px] mt-[25px] text-[20px] text-[#6F7F92]"
       >
         <a href="../index.html" data-tooltip="Home" class="hover:text-blue-900">
           <i class=""></i>
@@ -47,7 +266,7 @@
         <a
           href="./courses.html"
           data-tooltip="Courses"
-          class="hover:text-blue-900 text-blue-900"
+          class="hover:text-blue-900 text-blue-900 now"
         >
           <i class=""></i>
           <h1 class="">Courses</h1></a
@@ -71,16 +290,17 @@
       </div>
       <div class="features">
         <div
-          class="navfeatures lg:ml-[20px] lg:mr-[40px] flex justify-center text-center mt-3"
+          class="navfeatures lg:ml-[20px] lg:mr-[40px] flex justify-center text-center mt-4"
         >
           <li data-tooltip="" id="searchIcon">
             <i
-              class="bb-icon-search text-[36px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 text-gray-500 search"
+              class="bb-icon-search text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 search"
+              onclick="openSearchPopup() "
             ></i>
           </li>
           <li data-tooltip="" id="sunIcon" onclick="toggleDarkMode()">
             <i
-              class="bb-icon-sun text-[36px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 text-gray-500 sun"
+              class="bb-icon-sun text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 sun"
             ></i>
           </li>
           <li
@@ -94,19 +314,22 @@
 
           <li data-tooltip="">
             <i
-              class="bb-icon-shopping-cart text-[36px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 text-gray-500 cart"
+              class="bb-icon-shopping-cart text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 cart"
+              onclick="showCartPopup()"
             ></i>
           </li>
 
           <li data-tooltip="">
             <i
-              class="bb-icon-bell text-[36px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 text-gray-500"
+              class="bb-icon-bell text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
+              onclick="showNotiPopup()"
             ></i>
           </li>
 
           <li data-tooltip="">
             <i
-              class="bb-icon-inbox text-[36px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4 text-gray-500"
+              class="bb-icon-inbox text-[30px] hover:text-white hover:bg-[#FFDB0E] hover:rounded-xl cursor-pointer ml-4"
+              onclick="showInboxPopup()"
             ></i>
           </li>
         </div>
@@ -129,19 +352,32 @@
           </button></a -->
       </div>
     </div>
-    <div class="ml-[100px] mt-[200px] mb-4">
+
+    <div class="ml-[40px] mb-4">
+      <div class="content pt-[100px]">
+        <div class="flex justify-between mt-">
+          <h2 class="text-4xl font-semibold">Courses</h2>
+          <input
+            type="search"
+            id="default-search"
+            class="block w-[30%] border-2 outline-none py-3 px-8 rounded-lg"
+            placeholder="Search any member..."
+            required
+          />
+        </div>
+      </div>
       <div
-        class="courses-grid mt-16 ml-4 grid grid-cols-3 gap-32 md:grid-cols-2 lg:grid-cols-3 courses"
+        class="courses-grid mt-16 grid grid-cols-2 gap-0 md:grid-cols-4 lg:grid-cols-4 courses"
         id="courses"
       >
         <!-- Course 1 -->
         <div
-          class="course-card border border-gray-300 rounded-lg w-[300px] h-[430px] hover:shadow-2xl"
+          class="course-card border border-gray-300 rounded-lg w-[280px] md:w-[320px] h-[430px]"
         >
           <img
             src="https://hurbad.com/wp-content/uploads/2023/01/Accounting-Principles-Horizental-300x173.png"
             alt="Course 1"
-            class="w-[300px] h-40 object-cover mb-4 rounded-md cursor-pointer"
+            class="w-[350px] h-40 object-cover mb-4 rounded-md cursor-pointer"
           />
           <p class="mb-4 pl-4">21 topics</p>
           <h2
@@ -171,12 +407,12 @@
           </div>
         </div>
         <div
-          class="course-card border border-gray-300 rounded-lg w-[300px] h-[430px] hover:shadow-2xl -ml-20"
+          class="course-card border border-gray-300 rounded-lg w-[280px] md:w-[320px] h-[430px]"
         >
           <img
             src="https://hurbad.com/wp-content/uploads/2023/01/Accounting-Principles-Horizental-300x173.png"
             alt="Course 1"
-            class="w-[300px] h-40 object-cover mb-4 rounded-md cursor-pointer"
+            class="w-[350px] h-40 object-cover mb-4 rounded-md cursor-pointer"
           />
           <p class="mb-4 pl-4">21 topics</p>
           <h2
@@ -206,12 +442,82 @@
           </div>
         </div>
         <div
-          class="course-card border border-gray-300 rounded-lg w-[300px] h-[430px] hover:shadow-2xl -ml-40"
+          class="course-card border border-gray-300 rounded-lg w-[280px] md:w-[320px] h-[430px]"
         >
           <img
             src="https://hurbad.com/wp-content/uploads/2023/01/Accounting-Principles-Horizental-300x173.png"
             alt="Course 1"
-            class="w-[300px] h-40 object-cover mb-4 rounded-md cursor-pointer"
+            class="w-[350px] h-40 object-cover mb-4 rounded-md cursor-pointer"
+          />
+          <p class="mb-4 pl-4">21 topics</p>
+          <h2
+            class="text-xl font-semibold hover:text-yellow-500 mb-2 pl-4 pb-2 cursor-pointer"
+          >
+            Full Stack Web development
+          </h2>
+          <div class="flex pl-4">
+            <img
+              src="https://hurbad.com/wp-content/uploads/avatars/22504/64d6944997164-bpthumb.jpg"
+              class="w-8 h-8 rounded-full cursor-pointer"
+            />
+            <p
+              class="text-black pl-2 font-semibold mt-1 hover:text-blue-600 cursor-pointer"
+            >
+              Hussein Mohamed Nuure
+            </p>
+          </div>
+
+          <div class="mt-2">
+            <p class="text-gray-700 mb-4 pl-4">
+              Course description: Brief description of what the course covers.
+            </p>
+            <p class="text-green-600 font-bold pl-4 pt-6">
+              Continue Your Course
+            </p>
+          </div>
+        </div>
+        <div
+          class="course-card border border-gray-300 rounded-lg w-[280px] md:w-[320px] h-[430px]"
+        >
+          <img
+            src="https://hurbad.com/wp-content/uploads/2023/01/Accounting-Principles-Horizental-300x173.png"
+            alt="Course 1"
+            class="w-[350px] h-40 object-cover mb-4 rounded-md cursor-pointer"
+          />
+          <p class="mb-4 pl-4">21 topics</p>
+          <h2
+            class="text-xl font-semibold hover:text-yellow-500 mb-2 pl-4 pb-2 cursor-pointer"
+          >
+            Full Stack Web development
+          </h2>
+          <div class="flex pl-4">
+            <img
+              src="https://hurbad.com/wp-content/uploads/avatars/22504/64d6944997164-bpthumb.jpg"
+              class="w-8 h-8 rounded-full cursor-pointer"
+            />
+            <p
+              class="text-black pl-2 font-semibold mt-1 hover:text-blue-600 cursor-pointer"
+            >
+              Hussein Mohamed Nuure
+            </p>
+          </div>
+
+          <div class="mt-2">
+            <p class="text-gray-700 mb-4 pl-4">
+              Course description: Brief description of what the course covers.
+            </p>
+            <p class="text-green-600 font-bold pl-4 pt-6">
+              Continue Your Course
+            </p>
+          </div>
+        </div>
+        <div
+          class="course-card border border-gray-300 rounded-lg w-[280px] md:w-[320px] h-[430px] mt-8"
+        >
+          <img
+            src="https://hurbad.com/wp-content/uploads/2023/01/Accounting-Principles-Horizental-300x173.png"
+            alt="Course 1"
+            class="w-[350px] h-40 object-cover mb-4 rounded-md cursor-pointer"
           />
           <p class="mb-4 pl-4">21 topics</p>
           <h2
